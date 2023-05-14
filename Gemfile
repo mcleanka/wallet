@@ -12,11 +12,15 @@ gem "jquery-rails"
 # gem "feathericon-rails"
 gem 'feathericon-sass'
 
+# To create environment variables in a Ruby on Rails application
+gem 'figaro'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
+gem 'mysql2', '~> 0.5'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
