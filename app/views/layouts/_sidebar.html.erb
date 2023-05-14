@@ -19,9 +19,44 @@
             <div class="navbar-nav">
                <div class="nav-item">
 
-                  <%= link_to dashboard_path, class: "nav-link" do %>
+                  <%= link_to dashboard_path, class: "nav-link active" do %>
                      <i class="feather fe fe-home"></i>
                      Dashboard
+                  <% end %>
+                  
+               </div>
+               <div class="nav-item">
+
+                  <%= link_to dashboard_path, class: "nav-link" do %>
+                     <i class="feather fe fe-money"></i>
+                     Income
+                  <% end %>
+                  
+               </div>
+               <div class="nav-item">
+
+                  <%= link_to dashboard_path, class: "nav-link" do %>
+                     <i class="feather fe fe-cutlery"></i>
+                     Expenses
+                  <% end %>
+                  
+               </div>
+
+               <hr class="navbar-divider">
+               
+               <div class="nav-item">
+
+                  <%= link_to dashboard_path, class: "nav-link" do %>
+                     <i class="feather fe fe-wallet"></i>
+                     Budget
+                  <% end %>
+                  
+               </div>
+               <div class="nav-item">
+
+                  <%= link_to dashboard_path, class: "nav-link" do %>
+                     <i class="feather fe fe-timeline"></i>
+                     Goals
                   <% end %>
                   
                </div>
