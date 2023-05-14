@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  amount: 1
+  funder_name: MyString
+  source: one
+  status: one
+  date: 2023-05-14
+
+two:
+  title: MyString
+  amount: 1
+  funder_name: MyString
+  source: two
+  status: two
+  date: 2023-05-14
