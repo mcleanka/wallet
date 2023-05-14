@@ -1,0 +1,2 @@
+module GoalProgressesHelper
+end

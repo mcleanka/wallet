@@ -19,7 +19,7 @@
             <div class="navbar-nav">
                <div class="nav-item">
 
-                  <%= link_to dashboard_path, class: "nav-link active" do %>
+                  <%= link_to dashboard_path, class: "nav-link #{'active' if current_page?(dashboard_path)}" do %>
                      <i class="feather fe fe-home"></i>
                      Dashboard
                   <% end %>
@@ -27,7 +27,7 @@
                </div>
                <div class="nav-item">
 
-                  <%= link_to dashboard_path, class: "nav-link" do %>
+                  <%= link_to incomes_path, class: "nav-link #{'active' if current_page?(incomes_path)}" do %>
                      <i class="feather fe fe-money"></i>
                      Income
                   <% end %>
@@ -35,7 +35,7 @@
                </div>
                <div class="nav-item">
 
-                  <%= link_to dashboard_path, class: "nav-link" do %>
+                  <%= link_to expenses_path, class: "nav-link #{'active' if current_page?(expenses_path)}" do %>
                      <i class="feather fe fe-cutlery"></i>
                      Expenses
                   <% end %>
@@ -46,7 +46,7 @@
                
                <div class="nav-item">
 
-                  <%= link_to dashboard_path, class: "nav-link" do %>
+                  <%= link_to budgets_path, class: "nav-link #{'active' if current_page?(budgets_path)}" do %>
                      <i class="feather fe fe-wallet"></i>
                      Budget
                   <% end %>
@@ -54,7 +54,7 @@
                </div>
                <div class="nav-item">
 
-                  <%= link_to dashboard_path, class: "nav-link" do %>
+                  <%= link_to goals_path, class: "nav-link #{'active' if current_page?(goals_path)}" do %>
                      <i class="feather fe fe-timeline"></i>
                      Goals
                   <% end %>
@@ -64,6 +64,7 @@
          </div>
          
          <div class="mt-auto mb-md-4"></div>
+         
          <div class="navbar-user d-none d-md-flex">
             <a class="navbar-user-link" role="button">
                <div class="icon">

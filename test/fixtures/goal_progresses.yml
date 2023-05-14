@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  goals: one
+  amount_saved: 9.99
+  completion_percentage: 9.99
+  statuses: one
+  date: 2023-05-14
+
+two:
+  goals: two
+  amount_saved: 9.99
+  completion_percentage: 9.99
+  statuses: two
+  date: 2023-05-14
