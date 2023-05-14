@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  get '/dashboard', to: 'dashboard#index', as: 'dashboard'
+  resources :expenses
+  resources :goals
+  resources :budgets
+  resources :incomes
   
-  root "dashboard#index"
+  namespace :settings do
+    resources :statuses
+    resources :categories
+    resources :income_sources
+  end
+
+  root "dashboard#index", as: 'dashboard'
 
 end
