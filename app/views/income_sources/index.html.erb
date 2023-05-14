@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Income sources</h1>
+
+<div id="income_sources">
+  <% @income_sources.each do |income_source| %>
+    <%= render income_source %>
+    <p>
+      <%= link_to "Show this income source", income_source %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New income source", new_income_source_path %>

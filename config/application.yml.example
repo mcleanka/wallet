@@ -1,0 +1,11 @@
+MYSQL_USERNAME: root
+MYSQL_PASSWORD: password
+MYSQL_HOST: 0.0.0.0
+MYSQL_PORT: '3306'
+MYSQL_USE_SSL: 'true'
+MYSQL_SSL_CA_FILE: '/etc/ssl/ssl.crt'
+MYSQL_SSL_KEY_FILE: '/etc/ssl/ssl.key'
+MYSQL_SSL_CERT_FILE: '/etc/ssl/ssl.crt'
+MYSQL_DEVELOPMENT_DB: 'wallet_development'
+MYSQL_TEST_DB: 'wallet_test'
+MYSQL_PRODUCTION_DB: 'wallet_production'
