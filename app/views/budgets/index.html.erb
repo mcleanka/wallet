@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="header">
+    <div class="header-body">
+      <div class="align-items-center row">
+          <div class="col">
+            <h6 class="header-pretitle">Overview</h6>
+            <h1 class="header-title text-truncate"><%= 'Budgets' %></h1>
+          </div>
+          <div class="col-auto">
 
-<h1>Budgets</h1>
+            <%= link_to "New Budget", new_budget_path, type: "button", class: "btn btn-primary" %>
 
-<div id="budgets">
-  <% @budgets.each do |budget| %>
-    <%= render budget %>
-    <p>
-      <%= link_to "Show this budget", budget %>
-    </p>
-  <% end %>
+          </div>
+      </div>
+    </div>
 </div>
-
-<%= link_to "New budget", new_budget_path %>

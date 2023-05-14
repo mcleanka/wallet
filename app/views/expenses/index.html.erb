@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="header">
+    <div class="header-body">
+      <div class="align-items-center row">
+          <div class="col">
+            <h6 class="header-pretitle">Overview</h6>
+            <h1 class="header-title text-truncate"><%= 'Expenses' %></h1>
+          </div>
+          <div class="col-auto">
 
-<h1>Expenses</h1>
+            <%= link_to "New Expense", new_expense_path, type: "button", class: "btn btn-primary" %>
 
-<div id="expenses">
-  <% @expenses.each do |expense| %>
-    <%= render expense %>
-    <p>
-      <%= link_to "Show this expense", expense %>
-    </p>
-  <% end %>
+          </div>
+      </div>
+    </div>
 </div>
-
-<%= link_to "New expense", new_expense_path %>

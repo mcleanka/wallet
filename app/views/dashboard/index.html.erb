@@ -1,47 +1,199 @@
-<div class="main-content">
-   <div class="header bg-dark pb-5">
-      <div class="container-fluid">
-         <div class="header-body">
-            <div class="align-items-end row">
-               <div class="col">
-                  <h6 class="header-pretitle text-secondary">Annual</h6>
-                  <h1 class="header-title text-white">Audience</h1>
+<div class="header bg-dark pb-5">
+   <div class="container-fluid">
+      <div class="header-body">
+         <div class="align-items-end row">
+            <div class="col">
+               <h6 class="header-pretitle text-secondary">Annual</h6>
+               <h1 class="header-title text-white">Audience</h1>
+            </div>
+            <div class="col-auto">
+               <div class="header-tabs nav nav-tabs">
+                  <div class="nav-item">
+                     <a role="button" class="text-center nav-link" tabindex="0" href="#">
+                        <h6 class="header-pretitle text-secondary">Customers</h6>
+                        <h3 class="text-white mb-0">73.2k</h3>
+                     </a>
+                  </div>
+                  <div class="nav-item">
+                     <a role="button" class="text-center nav-link" tabindex="0" href="#">
+                        <h6 class="header-pretitle text-secondary">Sessions</h6>
+                        <h3 class="text-white mb-0">92.1k</h3>
+                     </a>
+                  </div>
+                  <div class="nav-item">
+                     <a role="button" class="text-center nav-link active" tabindex="0" href="#">
+                        <h6 class="header-pretitle text-secondary">Conversion</h6>
+                        <h3 class="text-white mb-0">50.2%</h3>
+                     </a>
+                  </div>
                </div>
-               <div class="col-auto">
-                  <div class="header-tabs nav nav-tabs">
-                     <div class="nav-item">
-                        <a role="button" class="text-center nav-link" tabindex="0" href="#">
-                           <h6 class="header-pretitle text-secondary">Customers</h6>
-                           <h3 class="text-white mb-0">73.2k</h3>
-                        </a>
-                     </div>
-                     <div class="nav-item">
-                        <a role="button" class="text-center nav-link" tabindex="0" href="#">
-                           <h6 class="header-pretitle text-secondary">Sessions</h6>
-                           <h3 class="text-white mb-0">92.1k</h3>
-                        </a>
-                     </div>
-                     <div class="nav-item">
-                        <a role="button" class="text-center nav-link active" tabindex="0" href="#">
-                           <h6 class="header-pretitle text-secondary">Conversion</h6>
-                           <h3 class="text-white mb-0">50.2%</h3>
-                        </a>
+            </div>
+         </div>
+      </div>
+      <div class="header-footer">
+         <div class="chart">
+            <canvas role="img" style="display: block; box-sizing: border-box; height: 300px; width: 924px;" width="1848" height="600"></canvas>
+            <div id="chart-tooltip" role="tooltip" class="popover bs-popover-top" style="visibility: hidden; left: 44.4px; top: 131.1px; transform: translateX(-50%) translateY(-100%) translateY(-1rem);">
+               <div class="popover-arrow translate-middle-x"></div>
+               <div class="popover-content">
+                  <div>
+                     <h3 class="popover-header text-center text-nowrap">Jan</h3>
+                  </div>
+                  <div>
+                     <div class="popover-body d-flex align-items-center text-nowrap justify-content-center"><span class="popover-body-indicator" style="background-color: rgb(44, 123, 229);"></span> 40%</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="mt-n6 container-fluid">
+   <div class="row">
+      <div class="col-xl-8 col-12">
+         <div class="card">
+            <div class="card-header">
+               <h4 class="card-header-title">Orders</h4>
+               <span class="text-muted me-3">Show affiliate:</span>
+               <div class="form-switch"><input type="checkbox" id="cardToggle" class="form-check-input"></div>
+            </div>
+            <div class="card-body">
+               <div class="chart">
+                  <canvas role="img" style="display: block; box-sizing: border-box; height: 300px; width: 558px;" width="1116" height="600"></canvas>
+                  <div id="chart-tooltip" role="tooltip" class="popover bs-popover-top" style="visibility: hidden; left: 940.403px; top: 91.445px; transform: translateX(-50%) translateY(-100%) translateY(-1rem);">
+                     <div class="popover-arrow translate-middle-x"></div>
+                     <div class="popover-content">
+                        <div>
+                           <h3 class="popover-header text-center text-nowrap">Dec</h3>
+                        </div>
+                        <div>
+                           <div class="popover-body d-flex align-items-center text-nowrap justify-content-left"><span class="popover-body-indicator" style="background-color: rgb(44, 123, 229);"></span> 2020 $32k</div>
+                           <div class="popover-body d-flex align-items-center text-nowrap justify-content-left"><span class="popover-body-indicator" style="background-color: rgb(210, 221, 236);"></span> 2019 $22k</div>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <div class="header-footer">
-            <div class="chart">
-               <canvas role="img" style="display: block; box-sizing: border-box; height: 300px; width: 924px;" width="1848" height="600"></canvas>
-               <div id="chart-tooltip" role="tooltip" class="popover bs-popover-top" style="visibility: hidden; left: 44.4px; top: 131.1px; transform: translateX(-50%) translateY(-100%) translateY(-1rem);">
-                  <div class="popover-arrow translate-middle-x"></div>
-                  <div class="popover-content">
-                     <div>
-                        <h3 class="popover-header text-center text-nowrap">Jan</h3>
+      </div>
+      <div class="col-xl-4 col-12">
+         <div class="card">
+            <div class="card-header">
+               <h4 class="card-header-title">Traffic Channels</h4>
+               <div class="nav-tabs-sm nav card-header-tabs nav-tabs">
+                  <div class="nav-item"><a role="button" class="nav-link active" tabindex="0" href="#">All</a></div>
+                  <div class="nav-item"><a role="button" class="nav-link" tabindex="0" href="#">Direct</a></div>
+               </div>
+            </div>
+            <div class="card-body">
+               <div class="chart chart-appended">
+                  <canvas role="img" style="display: block; box-sizing: border-box; height: 240px; width: 242px;" width="484" height="481"></canvas>
+                  <div id="chart-tooltip" role="tooltip" class="popover bs-popover-top" style="visibility: hidden; left: 119.359px; top: 136.89px; transform: translateX(-50%) translateY(-100%) translateY(-1rem);">
+                     <div class="popover-arrow translate-middle-x"></div>
+                     <div class="popover-content">
+                        <div>
+                           <h3 class="popover-header text-center text-nowrap">Organic</h3>
+                        </div>
+                        <div>
+                           <div class="popover-body d-flex align-items-center text-nowrap justify-content-center"><span class="popover-body-indicator" style="background-color: rgb(166, 197, 247);"></span>25%</div>
+                        </div>
                      </div>
-                     <div>
-                        <div class="popover-body d-flex align-items-center text-nowrap justify-content-center"><span class="popover-body-indicator" style="background-color: rgb(44, 123, 229);"></span> 40%</div>
+                  </div>
+               </div>
+               <div class="chart-legend">
+                  <div class="chart-legend-item">
+                     <i class="chart-legend-indicator" style="background-color:#2C7BE5"></i> <!-- -->Direct
+                  </div>
+                  <div class="chart-legend-item">
+                     <i class="chart-legend-indicator" style="background-color:#A6C5F7"></i> <!-- -->Organic
+                  </div>
+                  <div class="chart-legend-item">
+                     <i class="chart-legend-indicator" style="background-color:#D2DDEC"></i> <!-- -->Referral
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-xl col-lg-6 col-12">
+         <div class="card">
+            <div class="card-body">
+               <div class="align-items-center row">
+                  <div class="col">
+                     <h6 class="text-uppercase text-muted mb-2">Weekly Sales</h6>
+                     <span class="h2 mb-0">$24,500</span><span class="mt-n1 ms-2 badge bg-success-soft">+3.5%</span>
+                  </div>
+                  <div class="col-auto">
+                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign text-muted">
+                        <g>
+                           <line x1="12" y1="1" x2="12" y2="23"></line>
+                           <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </g>
+                     </svg>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-xl col-lg-6 col-12">
+         <div class="card">
+            <div class="card-body">
+               <div class="align-items-center row">
+                  <div class="col">
+                     <h6 class="text-uppercase text-muted mb-2">Orders Placed</h6>
+                     <span class="h2 mb-0">763.5</span>
+                  </div>
+                  <div class="col-auto">
+                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase text-muted">
+                        <g>
+                           <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </g>
+                     </svg>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-xl col-lg-6 col-12">
+         <div class="card">
+            <div class="card-body">
+               <div class="align-items-center row">
+                  <div class="col">
+                     <h6 class="text-uppercase text-muted mb-2">Conversion Rate</h6>
+                     <div class="align-items-center g-0 row">
+                        <div class="col-auto"><span class="h2 me-2 mb-0">84.5%</span></div>
+                        <div class="col">
+                           <div class="progress-sm progress">
+                              <div role="progressbar" class="progress-bar" style="width:85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-auto">
+                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard text-muted">
+                        <g>
+                           <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                           <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                        </g>
+                     </svg>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-xl col-lg-6 col-12">
+         <div class="card">
+            <div class="card-body">
+               <div class="align-items-center row">
+                  <div class="col">
+                     <h6 class="text-uppercase text-muted mb-2">Avg. Value</h6>
+                     <span class="h2 mb-0">$85.5</span>
+                  </div>
+                  <div class="col-auto">
+                     <div class="chart chart-sparkline">
+                        <canvas role="img" style="display: block; box-sizing: border-box; height: 35px; width: 75px;" width="150" height="70"></canvas>
                      </div>
                   </div>
                </div>
@@ -49,152 +201,92 @@
          </div>
       </div>
    </div>
-   <div class="mt-n6 container-fluid">
-      <div class="row">
-         <div class="col-xl-8 col-12">
+   <div class="row">
+      <div class="col-xl-4 col-12">
+         <div class="card-adjust-xl">
             <div class="card">
                <div class="card-header">
-                  <h4 class="card-header-title">Orders</h4>
-                  <span class="text-muted me-3">Show affiliate:</span>
-                  <div class="form-switch"><input type="checkbox" id="cardToggle" class="form-check-input"></div>
+                  <h4 class="card-header-title">Recent Activity</h4>
+                  <a class="small" href="#!">View all</a>
                </div>
                <div class="card-body">
-                  <div class="chart">
-                     <canvas role="img" style="display: block; box-sizing: border-box; height: 300px; width: 558px;" width="1116" height="600"></canvas>
-                     <div id="chart-tooltip" role="tooltip" class="popover bs-popover-top" style="visibility: hidden; left: 940.403px; top: 91.445px; transform: translateX(-50%) translateY(-100%) translateY(-1rem);">
-                        <div class="popover-arrow translate-middle-x"></div>
-                        <div class="popover-content">
-                           <div>
-                              <h3 class="popover-header text-center text-nowrap">Dec</h3>
+                  <div class="list-group-flush list-group-activity my-n3 list-group">
+                     <div class="list-group-item">
+                        <div class="row">
+                           <div class="col-auto">
+                              <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-1.jpg" alt="Dianna Smiley"></div>
                            </div>
-                           <div>
-                              <div class="popover-body d-flex align-items-center text-nowrap justify-content-left"><span class="popover-body-indicator" style="background-color: rgb(44, 123, 229);"></span> 2020 $32k</div>
-                              <div class="popover-body d-flex align-items-center text-nowrap justify-content-left"><span class="popover-body-indicator" style="background-color: rgb(210, 221, 236);"></span> 2019 $22k</div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-xl-4 col-12">
-            <div class="card">
-               <div class="card-header">
-                  <h4 class="card-header-title">Traffic Channels</h4>
-                  <div class="nav-tabs-sm nav card-header-tabs nav-tabs">
-                     <div class="nav-item"><a role="button" class="nav-link active" tabindex="0" href="#">All</a></div>
-                     <div class="nav-item"><a role="button" class="nav-link" tabindex="0" href="#">Direct</a></div>
-                  </div>
-               </div>
-               <div class="card-body">
-                  <div class="chart chart-appended">
-                     <canvas role="img" style="display: block; box-sizing: border-box; height: 240px; width: 242px;" width="484" height="481"></canvas>
-                     <div id="chart-tooltip" role="tooltip" class="popover bs-popover-top" style="visibility: hidden; left: 119.359px; top: 136.89px; transform: translateX(-50%) translateY(-100%) translateY(-1rem);">
-                        <div class="popover-arrow translate-middle-x"></div>
-                        <div class="popover-content">
-                           <div>
-                              <h3 class="popover-header text-center text-nowrap">Organic</h3>
-                           </div>
-                           <div>
-                              <div class="popover-body d-flex align-items-center text-nowrap justify-content-center"><span class="popover-body-indicator" style="background-color: rgb(166, 197, 247);"></span>25%</div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="chart-legend">
-                     <div class="chart-legend-item">
-                        <i class="chart-legend-indicator" style="background-color:#2C7BE5"></i> <!-- -->Direct
-                     </div>
-                     <div class="chart-legend-item">
-                        <i class="chart-legend-indicator" style="background-color:#A6C5F7"></i> <!-- -->Organic
-                     </div>
-                     <div class="chart-legend-item">
-                        <i class="chart-legend-indicator" style="background-color:#D2DDEC"></i> <!-- -->Referral
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-xl col-lg-6 col-12">
-            <div class="card">
-               <div class="card-body">
-                  <div class="align-items-center row">
-                     <div class="col">
-                        <h6 class="text-uppercase text-muted mb-2">Weekly Sales</h6>
-                        <span class="h2 mb-0">$24,500</span><span class="mt-n1 ms-2 badge bg-success-soft">+3.5%</span>
-                     </div>
-                     <div class="col-auto">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign text-muted">
-                           <g>
-                              <line x1="12" y1="1" x2="12" y2="23"></line>
-                              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                           </g>
-                        </svg>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-xl col-lg-6 col-12">
-            <div class="card">
-               <div class="card-body">
-                  <div class="align-items-center row">
-                     <div class="col">
-                        <h6 class="text-uppercase text-muted mb-2">Orders Placed</h6>
-                        <span class="h2 mb-0">763.5</span>
-                     </div>
-                     <div class="col-auto">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase text-muted">
-                           <g>
-                              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                           </g>
-                        </svg>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-xl col-lg-6 col-12">
-            <div class="card">
-               <div class="card-body">
-                  <div class="align-items-center row">
-                     <div class="col">
-                        <h6 class="text-uppercase text-muted mb-2">Conversion Rate</h6>
-                        <div class="align-items-center g-0 row">
-                           <div class="col-auto"><span class="h2 me-2 mb-0">84.5%</span></div>
-                           <div class="col">
-                              <div class="progress-sm progress">
-                                 <div role="progressbar" class="progress-bar" style="width:85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                           <div class="ms-n2 col">
+                              <div class="small">
+                                 <strong>Dianna Smiley</strong> <!-- -->shared your post with Ab Hadley, Adolfo Hess, and 3 others.
                               </div>
+                              <small class="text-muted">2m ago</small>
                            </div>
                         </div>
                      </div>
-                     <div class="col-auto">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard text-muted">
-                           <g>
-                              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                           </g>
-                        </svg>
+                     <div class="list-group-item">
+                        <div class="row">
+                           <div class="col-auto">
+                              <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-2.jpg" alt="Ab Hadley"></div>
+                           </div>
+                           <div class="ms-n2 col">
+                              <div class="small">
+                                 <strong>Ab Hadley</strong> <!-- -->reacted to your post with a 😍
+                              </div>
+                              <small class="text-muted">2m ago</small>
+                           </div>
+                        </div>
                      </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-xl col-lg-6 col-12">
-            <div class="card">
-               <div class="card-body">
-                  <div class="align-items-center row">
-                     <div class="col">
-                        <h6 class="text-uppercase text-muted mb-2">Avg. Value</h6>
-                        <span class="h2 mb-0">$85.5</span>
+                     <div class="list-group-item">
+                        <div class="row">
+                           <div class="col-auto">
+                              <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-3.jpg" alt="Adolfo Hess"></div>
+                           </div>
+                           <div class="ms-n2 col">
+                              <div class="small">
+                                 <strong>Adolfo Hess</strong> <!-- -->commented “I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”
+                              </div>
+                              <small class="text-muted">2m ago</small>
+                           </div>
+                        </div>
                      </div>
-                     <div class="col-auto">
-                        <div class="chart chart-sparkline">
-                           <canvas role="img" style="display: block; box-sizing: border-box; height: 35px; width: 75px;" width="150" height="70"></canvas>
+                     <div class="list-group-item">
+                        <div class="row">
+                           <div class="col-auto">
+                              <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-4.jpg" alt="Daniela Dewitt"></div>
+                           </div>
+                           <div class="ms-n2 col">
+                              <div class="small">
+                                 <strong>Daniela Dewitt</strong> <!-- -->subscribed to you.
+                              </div>
+                              <small class="text-muted">2m ago</small>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="list-group-item">
+                        <div class="row">
+                           <div class="col-auto">
+                              <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-5.jpg" alt="Miyah Myles"></div>
+                           </div>
+                           <div class="ms-n2 col">
+                              <div class="small">
+                                 <strong>Miyah Myles</strong> <!-- -->shared your post with Ryu Duke, Glen Rouse, and 3 others.
+                              </div>
+                              <small class="text-muted">2m ago</small>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="list-group-item">
+                        <div class="row">
+                           <div class="col-auto">
+                              <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-6.jpg" alt="Ryu Duke"></div>
+                           </div>
+                           <div class="ms-n2 col">
+                              <div class="small">
+                                 <strong>Ryu Duke</strong> <!-- -->reacted to your post with a 😍
+                              </div>
+                              <small class="text-muted">2m ago</small>
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -202,245 +294,151 @@
             </div>
          </div>
       </div>
-      <div class="row">
-         <div class="col-xl-4 col-12">
-            <div class="card-adjust-xl">
-               <div class="card">
-                  <div class="card-header">
-                     <h4 class="card-header-title">Recent Activity</h4>
-                     <a class="small" href="#!">View all</a>
-                  </div>
-                  <div class="card-body">
-                     <div class="list-group-flush list-group-activity my-n3 list-group">
-                        <div class="list-group-item">
-                           <div class="row">
-                              <div class="col-auto">
-                                 <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-1.jpg" alt="Dianna Smiley"></div>
-                              </div>
-                              <div class="ms-n2 col">
-                                 <div class="small">
-                                    <strong>Dianna Smiley</strong> <!-- -->shared your post with Ab Hadley, Adolfo Hess, and 3 others.
-                                 </div>
-                                 <small class="text-muted">2m ago</small>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="list-group-item">
-                           <div class="row">
-                              <div class="col-auto">
-                                 <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-2.jpg" alt="Ab Hadley"></div>
-                              </div>
-                              <div class="ms-n2 col">
-                                 <div class="small">
-                                    <strong>Ab Hadley</strong> <!-- -->reacted to your post with a 😍
-                                 </div>
-                                 <small class="text-muted">2m ago</small>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="list-group-item">
-                           <div class="row">
-                              <div class="col-auto">
-                                 <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-3.jpg" alt="Adolfo Hess"></div>
-                              </div>
-                              <div class="ms-n2 col">
-                                 <div class="small">
-                                    <strong>Adolfo Hess</strong> <!-- -->commented “I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”
-                                 </div>
-                                 <small class="text-muted">2m ago</small>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="list-group-item">
-                           <div class="row">
-                              <div class="col-auto">
-                                 <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-4.jpg" alt="Daniela Dewitt"></div>
-                              </div>
-                              <div class="ms-n2 col">
-                                 <div class="small">
-                                    <strong>Daniela Dewitt</strong> <!-- -->subscribed to you.
-                                 </div>
-                                 <small class="text-muted">2m ago</small>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="list-group-item">
-                           <div class="row">
-                              <div class="col-auto">
-                                 <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-5.jpg" alt="Miyah Myles"></div>
-                              </div>
-                              <div class="ms-n2 col">
-                                 <div class="small">
-                                    <strong>Miyah Myles</strong> <!-- -->shared your post with Ryu Duke, Glen Rouse, and 3 others.
-                                 </div>
-                                 <small class="text-muted">2m ago</small>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="list-group-item">
-                           <div class="row">
-                              <div class="col-auto">
-                                 <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" src="https://dashkit-react.vercel.app/img/avatars/profiles/avatar-6.jpg" alt="Ryu Duke"></div>
-                              </div>
-                              <div class="ms-n2 col">
-                                 <div class="small">
-                                    <strong>Ryu Duke</strong> <!-- -->reacted to your post with a 😍
-                                 </div>
-                                 <small class="text-muted">2m ago</small>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+      <div class="col-xl-8 col-12">
+         <div class="card">
+            <div class="card-header">
+               <h4 class="card-header-title">Best Selling Products</h4>
+               <button type="button" class="btn btn-white btn-sm">Export</button>
             </div>
-         </div>
-         <div class="col-xl-8 col-12">
-            <div class="card">
-               <div class="card-header">
-                  <h4 class="card-header-title">Best Selling Products</h4>
-                  <button type="button" class="btn btn-white btn-sm">Export</button>
-               </div>
-               <div class="table-responsive">
-                  <table class="card-table table-nowrap table table-sm table-hover">
-                     <thead>
-                        <tr>
-                           <th colspan="1" title="Toggle SortBy" style="cursor:pointer" class="is-sortable">Product</th>
-                           <th colspan="1" title="Toggle SortBy" style="cursor:pointer" class="is-sortable">Stock</th>
-                           <th colspan="1" title="Toggle SortBy" style="cursor:pointer" class="is-sortable">Price</th>
-                           <th colspan="1" title="Toggle SortBy" style="cursor:pointer" class="is-sortable">Monthly sales</th>
-                           <th colspan="1" class="text-end">&nbsp;</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>
-                              <div class="d-flex align-items-center">
-                                 <div class="avatar"><img class="avatar-img rounded me-3" src="https://dashkit-react.vercel.app/img/avatars/products/product-1.jpg" alt="Sketchpad"></div>
-                                 <div class="ms-3">
-                                    <h4 class="fw-normal mb-1">Sketchpad</h4>
-                                    <small class="text-muted">3" x 5" Size</small>
-                                 </div>
+            <div class="table-responsive">
+               <table class="card-table table-nowrap table table-sm table-hover">
+                  <thead>
+                     <tr>
+                        <th colspan="1" title="Toggle SortBy" style="cursor:pointer" class="is-sortable">Product</th>
+                        <th colspan="1" title="Toggle SortBy" style="cursor:pointer" class="is-sortable">Stock</th>
+                        <th colspan="1" title="Toggle SortBy" style="cursor:pointer" class="is-sortable">Price</th>
+                        <th colspan="1" title="Toggle SortBy" style="cursor:pointer" class="is-sortable">Monthly sales</th>
+                        <th colspan="1" class="text-end">&nbsp;</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <div class="d-flex align-items-center">
+                              <div class="avatar"><img class="avatar-img rounded me-3" src="https://dashkit-react.vercel.app/img/avatars/products/product-1.jpg" alt="Sketchpad"></div>
+                              <div class="ms-3">
+                                 <h4 class="fw-normal mb-1">Sketchpad</h4>
+                                 <small class="text-muted">3" x 5" Size</small>
                               </div>
-                           </td>
-                           <td><span class="badge bg-success-soft">Available</span></td>
-                           <td>
-                              $<!-- -->14.99
-                           </td>
-                           <td>
-                              $<!-- -->3,145.23
-                           </td>
-                           <td class="text-end">
-                              <div class="dropdown">
-                                 <span class="dropdown-ellipses dropdown-toggle" id="react-aria-3" aria-expanded="false" role="button">
-                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                                       <g>
-                                          <circle cx="12" cy="12" r="1"></circle>
-                                          <circle cx="12" cy="5" r="1"></circle>
-                                          <circle cx="12" cy="19" r="1"></circle>
-                                       </g>
-                                    </svg>
-                                 </span>
-                                 <div x-placement="top-end" aria-labelledby="react-aria-3" class="dropdown-menu dropdown-menu-end" data-popper-reference-hidden="true" data-popper-escaped="true" data-popper-placement="top-end" style="position: absolute; inset: auto 0px 0px auto; transform: translate3d(-61px, 75px, 0px);"><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Action</a><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Another action</a><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Something else here</a></div>
+                           </div>
+                        </td>
+                        <td><span class="badge bg-success-soft">Available</span></td>
+                        <td>
+                           $<!-- -->14.99
+                        </td>
+                        <td>
+                           $<!-- -->3,145.23
+                        </td>
+                        <td class="text-end">
+                           <div class="dropdown">
+                              <span class="dropdown-ellipses dropdown-toggle" id="react-aria-3" aria-expanded="false" role="button">
+                                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
+                                    <g>
+                                       <circle cx="12" cy="12" r="1"></circle>
+                                       <circle cx="12" cy="5" r="1"></circle>
+                                       <circle cx="12" cy="19" r="1"></circle>
+                                    </g>
+                                 </svg>
+                              </span>
+                              <div x-placement="top-end" aria-labelledby="react-aria-3" class="dropdown-menu dropdown-menu-end" data-popper-reference-hidden="true" data-popper-escaped="true" data-popper-placement="top-end" style="position: absolute; inset: auto 0px 0px auto; transform: translate3d(-61px, 75px, 0px);"><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Action</a><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Another action</a><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Something else here</a></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="d-flex align-items-center">
+                              <div class="avatar"><img class="avatar-img rounded me-3" src="https://dashkit-react.vercel.app/img/avatars/products/product-2.jpg" alt="Turtleshell Shades"></div>
+                              <div class="ms-3">
+                                 <h4 class="fw-normal mb-1">Turtleshell Shades</h4>
+                                 <small class="text-muted">UV + Blue Light</small>
                               </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <div class="d-flex align-items-center">
-                                 <div class="avatar"><img class="avatar-img rounded me-3" src="https://dashkit-react.vercel.app/img/avatars/products/product-2.jpg" alt="Turtleshell Shades"></div>
-                                 <div class="ms-3">
-                                    <h4 class="fw-normal mb-1">Turtleshell Shades</h4>
-                                    <small class="text-muted">UV + Blue Light</small>
-                                 </div>
+                           </div>
+                        </td>
+                        <td><span class="badge bg-warning-soft">Unavailable</span></td>
+                        <td>
+                           $<!-- -->39.99
+                        </td>
+                        <td>
+                           $<!-- -->2,611.82
+                        </td>
+                        <td class="text-end">
+                           <div class="dropdown">
+                              <span class="dropdown-ellipses dropdown-toggle" id="react-aria-4" aria-expanded="false" role="button">
+                                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
+                                    <g>
+                                       <circle cx="12" cy="12" r="1"></circle>
+                                       <circle cx="12" cy="5" r="1"></circle>
+                                       <circle cx="12" cy="19" r="1"></circle>
+                                    </g>
+                                 </svg>
+                              </span>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="d-flex align-items-center">
+                              <div class="avatar"><img class="avatar-img rounded me-3" src="https://dashkit-react.vercel.app/img/avatars/products/product-3.jpg" alt="Nike &quot;Go Bag"></div>
+                              <div class="ms-3">
+                                 <h4 class="fw-normal mb-1">Nike "Go Bag</h4>
+                                 <small class="text-muted">Leather + Gortex</small>
                               </div>
-                           </td>
-                           <td><span class="badge bg-warning-soft">Unavailable</span></td>
-                           <td>
-                              $<!-- -->39.99
-                           </td>
-                           <td>
-                              $<!-- -->2,611.82
-                           </td>
-                           <td class="text-end">
-                              <div class="dropdown">
-                                 <span class="dropdown-ellipses dropdown-toggle" id="react-aria-4" aria-expanded="false" role="button">
-                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                                       <g>
-                                          <circle cx="12" cy="12" r="1"></circle>
-                                          <circle cx="12" cy="5" r="1"></circle>
-                                          <circle cx="12" cy="19" r="1"></circle>
-                                       </g>
-                                    </svg>
-                                 </span>
+                           </div>
+                        </td>
+                        <td><span class="badge bg-success-soft">Available</span></td>
+                        <td>
+                           $<!-- -->149.99
+                        </td>
+                        <td>
+                           $<!-- -->2,372.19
+                        </td>
+                        <td class="text-end">
+                           <div class="dropdown">
+                              <span class="dropdown-ellipses dropdown-toggle" id="react-aria-5" aria-expanded="false" role="button">
+                                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
+                                    <g>
+                                       <circle cx="12" cy="12" r="1"></circle>
+                                       <circle cx="12" cy="5" r="1"></circle>
+                                       <circle cx="12" cy="19" r="1"></circle>
+                                    </g>
+                                 </svg>
+                              </span>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="d-flex align-items-center">
+                              <div class="avatar"><img class="avatar-img rounded me-3" src="https://dashkit-react.vercel.app/img/avatars/products/product-4.jpg" alt="Swell Bottle"></div>
+                              <div class="ms-3">
+                                 <h4 class="fw-normal mb-1">Swell Bottle</h4>
+                                 <small class="text-muted">Bone Clay White</small>
                               </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <div class="d-flex align-items-center">
-                                 <div class="avatar"><img class="avatar-img rounded me-3" src="https://dashkit-react.vercel.app/img/avatars/products/product-3.jpg" alt="Nike &quot;Go Bag"></div>
-                                 <div class="ms-3">
-                                    <h4 class="fw-normal mb-1">Nike "Go Bag</h4>
-                                    <small class="text-muted">Leather + Gortex</small>
-                                 </div>
-                              </div>
-                           </td>
-                           <td><span class="badge bg-success-soft">Available</span></td>
-                           <td>
-                              $<!-- -->149.99
-                           </td>
-                           <td>
-                              $<!-- -->2,372.19
-                           </td>
-                           <td class="text-end">
-                              <div class="dropdown">
-                                 <span class="dropdown-ellipses dropdown-toggle" id="react-aria-5" aria-expanded="false" role="button">
-                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                                       <g>
-                                          <circle cx="12" cy="12" r="1"></circle>
-                                          <circle cx="12" cy="5" r="1"></circle>
-                                          <circle cx="12" cy="19" r="1"></circle>
-                                       </g>
-                                    </svg>
-                                 </span>
-                              </div>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <div class="d-flex align-items-center">
-                                 <div class="avatar"><img class="avatar-img rounded me-3" src="https://dashkit-react.vercel.app/img/avatars/products/product-4.jpg" alt="Swell Bottle"></div>
-                                 <div class="ms-3">
-                                    <h4 class="fw-normal mb-1">Swell Bottle</h4>
-                                    <small class="text-muted">Bone Clay White</small>
-                                 </div>
-                              </div>
-                           </td>
-                           <td><span class="badge bg-success-soft">Available</span></td>
-                           <td>
-                              $<!-- -->24.99
-                           </td>
-                           <td>
-                              $<!-- -->1,145.23
-                           </td>
-                           <td class="text-end">
-                              <div class="dropdown">
-                                 <span class="dropdown-ellipses dropdown-toggle" id="react-aria-6" aria-expanded="false" role="button">
-                                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                                       <g>
-                                          <circle cx="12" cy="12" r="1"></circle>
-                                          <circle cx="12" cy="5" r="1"></circle>
-                                          <circle cx="12" cy="19" r="1"></circle>
-                                       </g>
-                                    </svg>
-                                 </span>
-                              </div>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
+                           </div>
+                        </td>
+                        <td><span class="badge bg-success-soft">Available</span></td>
+                        <td>
+                           $<!-- -->24.99
+                        </td>
+                        <td>
+                           $<!-- -->1,145.23
+                        </td>
+                        <td class="text-end">
+                           <div class="dropdown">
+                              <span class="dropdown-ellipses dropdown-toggle" id="react-aria-6" aria-expanded="false" role="button">
+                                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
+                                    <g>
+                                       <circle cx="12" cy="12" r="1"></circle>
+                                       <circle cx="12" cy="5" r="1"></circle>
+                                       <circle cx="12" cy="19" r="1"></circle>
+                                    </g>
+                                 </svg>
+                              </span>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
             </div>
          </div>
       </div>

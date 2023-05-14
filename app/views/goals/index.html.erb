@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="header">
+    <div class="header-body">
+      <div class="align-items-center row">
+          <div class="col">
+            <h6 class="header-pretitle">Overview</h6>
+            <h1 class="header-title text-truncate"><%= 'Goals' %></h1>
+          </div>
+          <div class="col-auto">
 
-<h1>Goals</h1>
+            <%= link_to "New Goal", new_goal_path, type: "button", class: "btn btn-primary" %>
 
-<div id="goals">
-  <% @goals.each do |goal| %>
-    <%= render goal %>
-    <p>
-      <%= link_to "Show this goal", goal %>
-    </p>
-  <% end %>
+          </div>
+      </div>
+    </div>
 </div>
-
-<%= link_to "New goal", new_goal_path %>
