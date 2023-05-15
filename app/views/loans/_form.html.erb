@@ -1,7 +1,9 @@
 <%= form_with(model: loan) do |form| %>
-  <% if loan.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+    <% if loan.errors.any? %>
+    <div class="fade alert alert-light text-danger show">
+      <div class="alert-heading h4">
+        <%= pluralize(loan.errors.count, "error") %> prohibited this loan from being saved:
+      </div>
 
       <ul>
         <% loan.errors.each do |error| %>
@@ -11,32 +13,64 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :lender, style: "display: block" %>
-    <%= form.text_field :lender %>
+  <div class="row">
+
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :lender, class: "form-label" %>
+        <%= form.text_field :lender, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :amount, class: "form-label" %>
+        <%= form.number_field :amount, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :start_date, class: "form-label" %>
+        <%= form.date_field :start_date, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :end_date, class: "form-label" %>
+        <%= form.date_field :end_date, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :interest_rate, class: "form-label" %>
+        <%= form.text_field :interest_rate, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 col-12">
+      <div class="form-group">
+        <%= form.label :status, class: "form-label" %>
+        <%= form.select :status_id, options_for_select([['- Select from the list', nil]] + Status.all.map { |status| [status.name, status.id] }, (@loan.status_id.presence || nil)), {}, class: "form-control" %>
+      </div>
+    </div>
+    
   </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
-  </div>
+  <hr class="mt-5 mb-5">
+  <%= form.submit class: "w-100 btn btn-primary" %>
+  <%= link_to "Back to loans", loans_path, class: "w-100 text-muted btn btn-link" %>
 
-  <div>
-    <%= form.label :interest_rate, style: "display: block" %>
-    <%= form.text_field :interest_rate %>
-  </div>
-
-  <div>
-    <%= form.label :start_date, style: "display: block" %>
-    <%= form.date_field :start_date %>
-  </div>
-
-  <div>
-    <%= form.label :end_date, style: "display: block" %>
-    <%= form.date_field :end_date %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

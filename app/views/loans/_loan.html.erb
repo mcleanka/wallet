@@ -1,27 +1,96 @@
-<div id="<%= dom_id loan %>">
-  <p>
-    <strong>Lender:</strong>
-    <%= loan.lender %>
-  </p>
+<div class="card"  id="<%= dom_id loan %>">
+    <div class="p-5 card-body">
+      <div class="row">
+          <div class="text-end col"><span class="badge bg-danger"><%= @loan.status.name%></span></div>
+      </div>
+      <div class="row">
+          <div class="text-center col">
+            <h2 class="mb-2">Loan form <%= @loan.lender %></h2>
+            <p class="text-muted mb-6">Loan #<%= @loan.id%></p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6 col-12">
+           <h6 class="text-uppercase text-muted">
+              Lender:
+            </h6>
+            <p class="mb-4">
+              <%= loan.lender %>
+            </p>
+            <h6 class="text-uppercase text-muted">
+              Amount:
+            </h6>
+            <p class="mb-4">
+              <%= loan.formatted_amount %>
+            </p>
+            <h6 class="text-uppercase text-muted">
+              Interest rate:
+            </h6>
+            <p class="mb-4">
+              <%= loan.formatted_interest_rate %>
+            </p>
+          </div>
+          
+          <div class="text-md-end col-md-6 col-12">
+            <h6 class="text-uppercase text-muted">
+              Start date:
+            </h6>
+            <p class="mb-4">
+              <%= loan.formatted_start_date %>
+            </p>
+            <h6 class="text-uppercase text-muted">
+              End date:
+            </h6>
+            <p class="mb-4">
+              <%= loan.formatted_end_date %>
+            </p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+            <div class="table-responsive">
+                <table class="my-4 table">
+                  <thead>
+                      <tr>
+                        <th class="px-0 bg-transparent border-top-0"><span class="h6">Amount</span></th>
+                        <th class="px-0 bg-transparent border-top-0"><span class="h6">Payment Date</span></th>
+                        <th class="px-0 bg-transparent border-top-0 text-end"><span class="h6">Action</span></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <% @loan.loan_payment.each do |loan_payment| %>
+                      
+                      <tr>
+                        <td class="px-0">
+                          <%= loan_payment.formatted_amount %>
+                        </td>
+                        <td class="px-0">
+                          <%= loan_payment.formatted_payment_date %>
+                        </td>
+                        <td class="text-end">
+                          <%= button_to "Delete", @loan_payment, method: :delete %>
+                        </td>
+                      </tr>
+                    
+                    <% end %>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= loan.amount %>
-  </p>
+                    <tr>
+                      <td class="px-0 border-top border-top-2">
+                        <strong>Total amount paid</strong>
+                      </td>
+                      <td colspan="2" class="px-0 text-end border-top border-top-2">
+                        <span class="h3">
+                          
+                          <%= number_to_currency(@loan.loan_payment.sum(:amount), precision: 2, unit: "MK", separator: ".", delimiter: ",") %>
 
-  <p>
-    <strong>Interest rate:</strong>
-    <%= loan.interest_rate %>
-  </p>
+                        </span>
+                      </td>
+                    </tr>
 
-  <p>
-    <strong>Start date:</strong>
-    <%= loan.start_date %>
-  </p>
-
-  <p>
-    <strong>End date:</strong>
-    <%= loan.end_date %>
-  </p>
-
+                  </tbody>
+                </table>
+            </div>
+          </div>
+      </div>
+    </div>
 </div>

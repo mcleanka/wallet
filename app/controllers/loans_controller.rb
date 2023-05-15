@@ -8,6 +8,7 @@ class LoansController < ApplicationController
 
   # GET /loans/1 or /loans/1.json
   def show
+      @loan = Loan.includes(:loan_payment).find(params[:id])
   end
 
   # GET /loans/new
@@ -65,6 +66,6 @@ class LoansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def loan_params
-      params.require(:loan).permit(:lender, :amount, :interest_rate, :start_date, :end_date)
+      params.require(:loan).permit(:lender, :amount, :interest_rate, :start_date, :end_date, :status_id)
     end
 end

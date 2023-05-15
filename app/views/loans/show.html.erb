@@ -1,10 +1,28 @@
-<p style="color: green"><%= notice %></p>
+<div class="justify-content-center row">
+   <div class="col-xl-8 col-lg-10 col-12">
+      <div class="header mt-md-5">
+         <div class="header-body">
+            <div class="align-items-center row">
+               <div class="col">
+                  <h6 class="header-pretitle">Loan Details</h6>
+                  <h1 class="header-title">Loan #<%= @loan.id %></h1>
+               </div>
+               <div class="col-auto d-flex">
+                <%= link_to "Back to Loans", loans_path, type: "button", class: "lift btn btn-white" %>
+                <%= link_to "Edit", edit_loan_path(@loan), type: "button", class: "lift mx-2 btn btn-primary" %>
+                <%= button_to "Delete", @loan, method: :delete, class: "lift btn btn-danger" %>
+              </div>
+            </div>
+         </div>
+      </div>
 
-<%= render @loan %>
+      <% if notice %>
+        <div role="alert" class="fade alert alert-success show">
+          <%= notice %>
+        </div>
+      <% end %>
 
-<div>
-  <%= link_to "Edit this loan", edit_loan_path(@loan) %> |
-  <%= link_to "Back to loans", loans_path %>
+      <%= render @loan %>
 
-  <%= button_to "Destroy this loan", @loan, method: :delete %>
+   </div>
 </div>
