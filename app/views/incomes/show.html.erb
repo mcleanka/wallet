@@ -1,4 +1,8 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+<div role="alert" class="fade alert alert-success show">
+  <%= notice %>
+</div>
+<% end %>
 
 <%= render @income %>
 

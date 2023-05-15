@@ -14,6 +14,12 @@
     </div>
 </div>
 
+<% if notice %>
+<div role="alert" class="fade alert alert-danger show">
+  <%= notice %>
+</div>
+<% end %>
+
 <div class="card">
     <div class="table-responsive">
       <table class="card-table table-nowrap table table-sm">
