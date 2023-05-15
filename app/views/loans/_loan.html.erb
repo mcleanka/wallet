@@ -67,8 +67,9 @@
                         <td class="px-0">
                           <%= loan_payment.formatted_payment_date %>
                         </td>
-                        <td class="text-end">
-                          <%= button_to "Delete", @loan_payment, method: :delete %>
+                        <td class="text-end d-flex">
+                          <%= button_to "Delete", @loan_payment, method: :delete, class: "btn btn-danger"  %>
+                          <%= link_to "Edit", edit_loan_loan_payment_path(@loan, loan_payment), class: "btn btn-primary" %>
                         </td>
                       </tr>
                     

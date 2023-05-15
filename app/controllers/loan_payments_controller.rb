@@ -1,6 +1,6 @@
 class LoanPaymentsController < ApplicationController
   before_action :set_loan_payment, only: %i[ show edit update destroy ]
-  before_action :set_loan, only: %i[ new create update]
+  before_action :set_loan, only: %i[ new create update, edit]
   # GET /loan_payments or /loan_payments.json
   def index
     @loan_payments = LoanPayment.all
@@ -38,8 +38,8 @@ class LoanPaymentsController < ApplicationController
   def update
     respond_to do |format|
       if @loan_payment.update(loan_payment_params)
-        format.html { redirect_to loan_payment_url(@loan_payment), notice: "Loan payment was successfully updated." }
-        format.json { render :show, status: :ok, location: @loan_payment }
+        format.html { redirect_to loan_url(@loan), notice: "Loan payment was successfully updated." }
+        format.json { render :show, status: :ok, location: @loan }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @loan_payment.errors, status: :unprocessable_entity }
