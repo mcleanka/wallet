@@ -288,39 +288,39 @@
 
 	@font-face {
 		font-family: Cerebri Sans;
-		src: url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-regular.1a7b33d1.eot);
-		src: url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-regular.1a7b33d1.eot) format("embedded-opentype"),
-			url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-regular.166c2ea9.woff) format("woff"),
-			url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-regular.68c34670.ttf) format("truetype");
+		src: url(./fonts/cerebrisans-regular.1a7b33d1.eot);
+		src: url(./fonts/cerebrisans-regular.1a7b33d1.eot) format("embedded-opentype"),
+			url(./fonts/cerebrisans-regular.166c2ea9.woff) format("woff"),
+			url(./fonts/cerebrisans-regular.68c34670.ttf) format("truetype");
 		font-weight: 400;
 		font-style: normal
 	}
 
 	@font-face {
 		font-family: Cerebri Sans;
-		src: url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-medium.34a25908.eot);
-		src: url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-medium.34a25908.eot) format("embedded-opentype"),
-			url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-medium.990e931a.woff) format("woff"),
-			url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-medium.0c19863b.ttf) format("truetype");
+		src: url(./fonts/cerebrisans-medium.34a25908.eot);
+		src: url(./fonts/cerebrisans-medium.34a25908.eot) format("embedded-opentype"),
+			url(./fonts/cerebrisans-medium.990e931a.woff) format("woff"),
+			url(./fonts/cerebrisans-medium.0c19863b.ttf) format("truetype");
 		font-weight: 500;
 		font-style: normal
 	}
 
 	@font-face {
 		font-family: Cerebri Sans;
-		src: url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-semibold.dad3dae6.eot);
-		src: url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-semibold.dad3dae6.eot) format("embedded-opentype"),
-			url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-semibold.d162ffd5.woff) format("woff"),
-			url(https://dashkit-react.vercel.app/_next/static/media/cerebrisans-semibold.c77f5986.ttf) format("truetype");
+		src: url(./fonts/cerebrisans-semibold.dad3dae6.eot);
+		src: url(./fonts/cerebrisans-semibold.dad3dae6.eot) format("embedded-opentype"),
+			url(./fonts/cerebrisans-semibold.d162ffd5.woff) format("woff"),
+			url(./fonts/cerebrisans-semibold.c77f5986.ttf) format("truetype");
 		font-weight: 600;
 		font-style: normal
 	}
 
 	@font-face {
 		font-family: Feather;
-		src: url(https://dashkit-react.vercel.app/_next/static/media/Feather.f76bd32d.ttf) format("truetype"),
-			url(https://dashkit-react.vercel.app/_next/static/media/Feather.03bfcccc.woff) format("woff"),
-			url(https://dashkit-react.vercel.app/_next/static/media/Feather.9c50f450.svg) format("svg");
+		src: url(./fonts/Feather.f76bd32d.ttf) format("truetype"),
+			url(./fonts/Feather.03bfcccc.woff) format("woff"),
+			url(./fonts/Feather.9c50f450.svg) format("svg");
 		font-weight: 400;
 		font-style: normal
 	}

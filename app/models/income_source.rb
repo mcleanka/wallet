@@ -1,3 +1,3 @@
 class IncomeSource < ApplicationRecord
-	has_many :incomes
+	has_many :income
 end

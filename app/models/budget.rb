@@ -1,4 +1,4 @@
 class Budget < ApplicationRecord
-  belongs_to :categories_id
-  belongs_to :statuses_id
+  belongs_to :categories
+  belongs_to :statuses
 end
