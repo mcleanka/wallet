@@ -53,8 +53,7 @@
                   <thead>
                       <tr>
                         <th class="px-0 bg-transparent border-top-0"><span class="h6">Amount</span></th>
-                        <th class="px-0 bg-transparent border-top-0"><span class="h6">Payment Date</span></th>
-                        <th class="px-0 bg-transparent border-top-0 text-end"><span class="h6">Action</span></th>
+                        <th class="px-0 bg-transparent border-top-0" colspan="2"><span class="h6">Payment Date</span></th>
                       </tr>
                   </thead>
                   <tbody>
@@ -67,9 +66,9 @@
                         <td class="px-0">
                           <%= loan_payment.formatted_payment_date %>
                         </td>
-                        <td class="text-end d-flex">
-                          <%= button_to "Delete", @loan_payment, method: :delete, class: "btn btn-danger"  %>
-                          <%= link_to "Edit", edit_loan_loan_payment_path(@loan, loan_payment), class: "btn btn-primary" %>
+                        <td class="text-end d-flex d-flex-end">
+                          <%= button_to "Delete", @loan_payment, method: :delete, class: "btn btn-sm btn-danger pr-4"  %>
+                          <%= link_to "Edit", edit_loan_loan_payment_path(@loan, loan_payment), class: "btn btn-sm bt-primary" %>
                         </td>
                       </tr>
                     
