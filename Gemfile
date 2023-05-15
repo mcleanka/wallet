@@ -77,13 +77,4 @@ end
 gem 'byebug'
 gem 'mysql2', '~> 0.5'
 
-gem "bootstrap"
-gem "jquery-rails"
 gem 'feathericon-sass'
-
-gem 'rails_script'
-gem 'js-routes'
-gem 'responders'
-gem 'jquery-datatables'
-# gem 'ajax-datatables-rails'
-gem 'ajax-datatables-rails', github: 'ajahongir/ajax-datatables-rails', branch: 'v-0-4-0'

@@ -1,0 +1,65 @@
+<div class="header">
+    <div class="header-body">
+      <div class="align-items-center row">
+          <div class="col">
+            <h6 class="header-pretitle">Overview</h6>
+            <h1 class="header-title text-truncate"><%= 'Loans' %></h1>
+          </div>
+          <div class="col-auto">
+
+            <%= link_to "New Loan", new_loan_path, type: "button", class: "btn btn-primary" %>
+
+          </div>
+      </div>
+    </div>
+</div>
+
+<% if notice %>
+<div role="alert" class="fade alert alert-danger show">
+  <%= notice %>
+</div>
+<% end %>
+
+<div class="card">
+    <div class="table-responsive">
+      <table class="card-table table-nowrap table table-sm">
+          <thead>
+            <tr>
+                <th>Lender</th>
+                <th>Amount</th>
+                <th>Interest Rate</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Duration</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <% @loans.each do |loan| %>
+            <tr>
+                <td><%= loan.lender %></td>
+                <td><%= loan.formatted_amount %></td>
+                <td><%= loan.formatted_interest_rate %></td>
+                <td><%= loan.formatted_start_date %></td>
+                <td><%= loan.formatted_end_date %></td>
+                <td><%= loan.duration %></td>
+                <td><span class="badge bg-success-soft"><%= loan.status.name %></span></td>
+                <td class="text-end">
+                  <%= link_to loan_path(loan), type: "button", class: "btn-rounded-circle btn btn-white btn-sm", title: "Show details" do %>
+                    <i class="fe fe-eye"></i>
+                  <% end %>
+
+                  <%= link_to new_loan_loan_payment_path(loan), type: "button", class: "btn-rounded-circle btn btn-sm btn-primary", title: "Pay back loan" do %>
+                    <i class="fe fe-check"></i>
+                  <% end %>
+
+                </td>
+            </tr>
+          <% end %>
+
+          </tbody>
+      </table>
+    </div>
+</div>

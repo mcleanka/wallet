@@ -1,0 +1,66 @@
+<%= form_with(model: loan_payment, url: loan_loan_payments_path(loan)) do |form| %>
+      <% if loan_payment.errors.any? %>
+    <div class="fade alert alert-light text-danger show">
+      <div class="alert-heading h4">
+        <%= pluralize(loan_payment.errors.count, "error") %> prohibited this loan payment from being saved:
+      </div>
+
+      <ul>
+        <% loan_payment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+
+    <div class="col-12">
+
+      <div class="form-group">
+        <%= form.label :lender, class: "form-label" %>
+        <%= form.text_field :loan_id, disabled: true, value: @loan.lender, class: "form-control" %>
+        <%= form.hidden_field :loan_id, value: @loan.id %>
+      </div>
+
+    </div>
+
+    <div class="col-12">
+
+      <div class="form-group">
+        <%= form.label :date_paid, class: "form-label" %>
+        <%= form.date_field :payment_date, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-12">
+
+      <div class="form-group">
+        <%= form.label :amount, class: "form-label" %>
+        <%= form.number_field :amount, class: "form-control" %>
+      </div>
+
+    </div>
+  
+  </div>
+
+  <hr class="my-5">
+  <div class="row align-items-center nav">
+      <div class="col-auto">
+        
+        <%= link_to "Back to loans", @loan, class: "btn btn-white btn-lg" %>
+      
+      </div>
+      
+      <div class="text-center col">
+        <h6 class="text-uppercase text-danger mb-0">Total Loan Amount: <%= @loan.formatted_amount %></h6>
+      </div>
+      <div class="col-auto">
+
+        <%= form.submit class: "btn btn-primary btn-lg", value: "Save Loan Payment" %>
+      
+      </div>
+  </div>
+
+<% end %>

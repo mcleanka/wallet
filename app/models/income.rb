@@ -4,4 +4,8 @@ class Income < ApplicationRecord
 
   validates :title, :amount, :funder_name, :date, presence: true
   validates :income_sources_id, :statuses_id, presence: true
+
+  def formatted_date
+    date.strftime("%d %b, %Y")
+	end
 end
