@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  resources :goal_progresses
+  resources :loans do
+    resources :loan_payments
+  end
+
+  resources :goals do
+    resources :goal_progresses
+  end
+
   resources :expenses
-  resources :goals
   resources :budgets
   resources :incomes
   
