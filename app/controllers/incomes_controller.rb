@@ -21,7 +21,10 @@ class IncomesController < ApplicationController
 
   # POST /incomes or /incomes.json
   def create
+    logger.info "income_params #{income_params}"
+    
     @income = Income.new(income_params)
+    
 
     respond_to do |format|
       if @income.save
@@ -65,6 +68,6 @@ class IncomesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def income_params
-      params.require(:income).permit(:title, :amount, :funder_name, :source_id, :status_id, :date)
+      params.require(:income).permit(:title, :amount, :funder_name, :income_sources_id, :statuses_id, :date)
     end
 end

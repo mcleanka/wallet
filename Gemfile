@@ -6,12 +6,6 @@ ruby "3.0.5"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 
-gem "bootstrap"
-gem "jquery-rails"
-# gem 'font-awesome-rails'
-# gem "feathericon-rails"
-gem 'feathericon-sass'
-
 # To create environment variables in a Ruby on Rails application
 gem 'figaro'
 
@@ -20,7 +14,6 @@ gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", "~> 1.4"
-gem 'mysql2', '~> 0.5'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -80,3 +73,17 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'byebug'
+gem 'mysql2', '~> 0.5'
+
+gem "bootstrap"
+gem "jquery-rails"
+gem 'feathericon-sass'
+
+gem 'rails_script'
+gem 'js-routes'
+gem 'responders'
+gem 'jquery-datatables'
+# gem 'ajax-datatables-rails'
+gem 'ajax-datatables-rails', github: 'ajahongir/ajax-datatables-rails', branch: 'v-0-4-0'

@@ -15,251 +15,37 @@
 </div>
 
 <div class="card">
-    <div class="card-header">
-      <div class="input-group-merge input-group-flush input-group-reverse input-group">
-          <input placeholder="Search" type="search" class="form-control">
-          <span class="input-group-text">
-            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search ">
-                <g>
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </g>
-            </svg>
-          </span>
-      </div>
-      <div class="dropdown">
-          <button type="button" id="react-aria-309" aria-expanded="false" class="dropdown-toggle btn btn-white btn-sm">Bulk action</button>
-          <div x-placement="bottom-start" aria-labelledby="react-aria-309" class="dropdown-menu" data-popper-reference-hidden="false" data-popper-escaped="false" data-popper-placement="bottom-start" style="position: absolute; inset: 0px auto auto 0px; transform: translate3d(1235.5px, 224px, 0px);"><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Action</a><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Another action</a><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Something else here</a></div>
-      </div>
-    </div>
     <div class="table-responsive">
       <table class="card-table table-nowrap table table-sm">
           <thead>
             <tr>
-                <th colspan="1">
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </th>
-                <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Order</th>
-                <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Product</th>
-                <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Date</th>
-                <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Total</th>
-                <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Status</th>
-                <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Payment method</th>
-                <th colspan="1" class="text-end">&nbsp;</th>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Funder</th>
+                <th>Source</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
             </tr>
           </thead>
           <tbody>
+
+          <% @incomes.each do |income| %>
             <tr>
+                <td><%= income.title %></td>
+                <td><%= income.amount %></td>
+                <td><%= income.funder_name %></td>
+                <td><%= income.income_source.name %></td>
+                <td><%= income.date %></td>
+                <td><span class="badge bg-success-soft"><%= income.status.name %></span></td>
                 <td>
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </td>
-                <td>#6520</td>
-                <td>5' x 3' Wall Poster</td>
-                <td><time datetime="2018-07-30">07/30/18</time></td>
-                <td>$55.25</td>
-                <td><span class="badge bg-success-soft">Shipped</span></td>
-                <td>Mastercard</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                      <span class="dropdown-ellipses dropdown-toggle" id="react-aria-310" aria-expanded="false" role="button">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                            <g>
-                              <circle cx="12" cy="12" r="1"></circle>
-                              <circle cx="12" cy="5" r="1"></circle>
-                              <circle cx="12" cy="19" r="1"></circle>
-                            </g>
-                        </svg>
-                      </span>
-                      <div x-placement="bottom-end" aria-labelledby="react-aria-310" class="dropdown-menu dropdown-menu-end" data-popper-reference-hidden="false" data-popper-escaped="false" data-popper-placement="bottom-end" style="position: absolute; inset: 0px 0px auto auto; transform: translate3d(-61px, 328.5px, 0px);"><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Action</a><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Another action</a><a href="#!" data-rr-ui-dropdown-item="" class="dropdown-item">Something else here</a></div>
-                  </div>
+                
+                  <%= link_to "Show", income %>
+
                 </td>
             </tr>
-            <tr>
-                <td>
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </td>
-                <td>#6521</td>
-                <td>XL Logo Tee</td>
-                <td><time datetime="2018-07-30">07/30/18</time></td>
-                <td>$14.99</td>
-                <td><span class="badge bg-success-soft">Shipped</span></td>
-                <td>Paypal</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                      <span class="dropdown-ellipses dropdown-toggle" id="react-aria-311" aria-expanded="false" role="button">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                            <g>
-                              <circle cx="12" cy="12" r="1"></circle>
-                              <circle cx="12" cy="5" r="1"></circle>
-                              <circle cx="12" cy="19" r="1"></circle>
-                            </g>
-                        </svg>
-                      </span>
-                  </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </td>
-                <td>#6522</td>
-                <td>Flexfit Hat</td>
-                <td><time datetime="2018-07-28">07/28/18</time></td>
-                <td>$25.5</td>
-                <td><span class="badge bg-warning-soft">Processing</span></td>
-                <td>Visa</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                      <span class="dropdown-ellipses dropdown-toggle" id="react-aria-312" aria-expanded="false" role="button">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                            <g>
-                              <circle cx="12" cy="12" r="1"></circle>
-                              <circle cx="12" cy="5" r="1"></circle>
-                              <circle cx="12" cy="19" r="1"></circle>
-                            </g>
-                        </svg>
-                      </span>
-                  </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </td>
-                <td>#6523</td>
-                <td>Reversible Hoodie</td>
-                <td><time datetime="2018-07-27">07/27/18</time></td>
-                <td>$64.99</td>
-                <td><span class="badge bg-danger-soft">Cancelled</span></td>
-                <td>Amex</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                      <span class="dropdown-ellipses dropdown-toggle" id="react-aria-313" aria-expanded="false" role="button">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                            <g>
-                              <circle cx="12" cy="12" r="1"></circle>
-                              <circle cx="12" cy="5" r="1"></circle>
-                              <circle cx="12" cy="19" r="1"></circle>
-                            </g>
-                        </svg>
-                      </span>
-                  </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </td>
-                <td>#6524</td>
-                <td>Geometric Print Shorts</td>
-                <td><time datetime="2018-07-25">07/25/18</time></td>
-                <td>$31.99</td>
-                <td><span class="badge bg-success-soft">Shipped</span></td>
-                <td>Paypal</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                      <span class="dropdown-ellipses dropdown-toggle" id="react-aria-314" aria-expanded="false" role="button">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                            <g>
-                              <circle cx="12" cy="12" r="1"></circle>
-                              <circle cx="12" cy="5" r="1"></circle>
-                              <circle cx="12" cy="19" r="1"></circle>
-                            </g>
-                        </svg>
-                      </span>
-                  </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </td>
-                <td>#6525</td>
-                <td>Super Mug</td>
-                <td><time datetime="2018-07-22">07/22/18</time></td>
-                <td>$9.99</td>
-                <td><span class="badge bg-success-soft">Shipped</span></td>
-                <td>Mastercard</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                      <span class="dropdown-ellipses dropdown-toggle" id="react-aria-315" aria-expanded="false" role="button">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                            <g>
-                              <circle cx="12" cy="12" r="1"></circle>
-                              <circle cx="12" cy="5" r="1"></circle>
-                              <circle cx="12" cy="19" r="1"></circle>
-                            </g>
-                        </svg>
-                      </span>
-                  </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </td>
-                <td>#6526</td>
-                <td>MD Pocket Tee</td>
-                <td><time datetime="2018-07-22">07/22/18</time></td>
-                <td>$19.99</td>
-                <td><span class="badge bg-warning-soft">Processing</span></td>
-                <td>Amex</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                      <span class="dropdown-ellipses dropdown-toggle" id="react-aria-316" aria-expanded="false" role="button">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                            <g>
-                              <circle cx="12" cy="12" r="1"></circle>
-                              <circle cx="12" cy="5" r="1"></circle>
-                              <circle cx="12" cy="19" r="1"></circle>
-                            </g>
-                        </svg>
-                      </span>
-                  </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                  <div>
-                      <div style="cursor: pointer;" class=""><input type="checkbox" class="form-check-input"></div>
-                  </div>
-                </td>
-                <td>#6527</td>
-                <td>Custom Coffee Blend</td>
-                <td><time datetime="2018-07-21">07/21/18</time></td>
-                <td>$11.99</td>
-                <td><span class="badge bg-success-soft">Shipped</span></td>
-                <td>Visa</td>
-                <td class="text-end">
-                  <div class="dropdown">
-                      <span class="dropdown-ellipses dropdown-toggle" id="react-aria-317" aria-expanded="false" role="button">
-                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
-                            <g>
-                              <circle cx="12" cy="12" r="1"></circle>
-                              <circle cx="12" cy="5" r="1"></circle>
-                              <circle cx="12" cy="19" r="1"></circle>
-                            </g>
-                        </svg>
-                      </span>
-                  </div>
-                </td>
-            </tr>
+          <% end %>
+
           </tbody>
       </table>
     </div>

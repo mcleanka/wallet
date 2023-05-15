@@ -38,3 +38,4 @@
 /config/application.yml
 
 /db/schema.rb
+.byebug_history
