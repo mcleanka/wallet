@@ -43,20 +43,32 @@
                </div>
 
                <hr class="navbar-divider">
+
+               <div class="nav-item">
+
+                  <%= link_to debts_path, class: "nav-link #{'active' if current_page?(debts_path)}" do %>
+                     <i class="feather fe fe-fork"></i>
+                     Debts
+                  <% end %>
+                  
+               </div>
+
+               <div class="nav-item">
+
+                  <%= link_to loans_path, class: "nav-link #{'active' if current_page?(loans_path)}" do %>
+                     <i class="feather fe fe-credit-card"></i>
+                     Loans
+                  <% end %>
+                  
+               </div>
+
+               <hr class="navbar-divider">
                
                <div class="nav-item">
 
                   <%= link_to budgets_path, class: "nav-link #{'active' if current_page?(budgets_path)}" do %>
                      <i class="feather fe fe-wallet"></i>
                      Budgets
-                  <% end %>
-                  
-               </div>
-               <div class="nav-item">
-
-                  <%= link_to loans_path, class: "nav-link #{'active' if current_page?(loans_path)}" do %>
-                     <i class="feather fe fe-credit-card"></i>
-                     Loans
                   <% end %>
                   
                </div>

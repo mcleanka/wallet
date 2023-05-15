@@ -1,0 +1,47 @@
+<%= form_with(model: debt_payment) do |form| %>
+  <% if debt_payment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(debt_payment.errors.count, "error") %> prohibited this debt_payment from being saved:</h2>
+
+      <ul>
+        <% debt_payment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :debt_id, style: "display: block" %>
+    <%= form.text_field :debt_id %>
+  </div>
+
+  <div>
+    <%= form.label :payment_date, style: "display: block" %>
+    <%= form.date_field :payment_date %>
+  </div>
+
+  <div>
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div>
+    <%= form.label :notes, style: "display: block" %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div>
+    <%= form.label :repaid, style: "display: block" %>
+    <%= form.check_box :repaid %>
+  </div>
+
+  <div>
+    <%= form.label :repayment_date, style: "display: block" %>
+    <%= form.date_field :repayment_date %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

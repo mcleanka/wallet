@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :debt_payments
+  resources :debts
   resources :loans do
     resources :loan_payments
   end
