@@ -1,6 +1,6 @@
 class Expense < ApplicationRecord
   belongs_to :status
-  has_many :budget
+  has_one :budget
 
   validates_presence_of :title, :status_id, :amount, :budget_id, :date
 

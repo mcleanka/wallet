@@ -13,3 +13,42 @@
       </div>
     </div>
 </div>
+
+<div class="card">
+    <div class="table-responsive">
+      <table class="card-table table-nowrap table table-sm">
+          <thead>
+            <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Duration</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <% @budgets.each do |budget| %>
+            <tr>
+                <td><%= budget.title %></td>
+                <td><%= budget.formatted_amount %></td>
+                <td><%= budget.category.name %></td>
+                <td><%= budget.formatted_start_date %></td>
+                <td><%= budget.formatted_end_date %></td>
+                <td><%= budget.duration %></td>
+                <td><span class="badge bg-success-soft"><%= budget.status.name %></span></td>
+                <td>
+                
+                  <%= link_to "Show", budget %>
+
+                </td>
+            </tr>
+          <% end %>
+
+          </tbody>
+      </table>
+    </div>
+</div>

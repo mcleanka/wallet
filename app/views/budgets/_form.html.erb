@@ -1,7 +1,9 @@
 <%= form_with(model: budget) do |form| %>
-  <% if budget.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(budget.errors.count, "error") %> prohibited this budget from being saved:</h2>
+    <% if budget.errors.any? %>
+    <div class="fade alert alert-light text-danger show">
+      <div class="alert-heading h4">
+        <%= pluralize(budget.errors.count, "error") %> prohibited this budget from being saved:
+      </div>
 
       <ul>
         <% budget.errors.each do |error| %>
@@ -11,42 +13,67 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+<div class="row">
+  <div class="col-md-6 col-12">
+
+    <div class="form-group">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+  </div>
+  
+  <div class="col-md-6 col-12">
+
+    <div class="form-group">
+      <%= form.label :amount, class: "form-label" %>
+      <%= form.number_field :amount, class: "form-control" %>
+    </div>
+
   </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
+  <div class="col-md-6 col-12">
+    <div class="form-group">
+      <%= form.label :category, class: "form-label" %>
+      <%= form.select :category_id, options_for_select([['- Select from the list', nil]] + Category.all.map { |category| [category.name, category.id] }, (@budget.category_id.presence || nil)), {}, class: "form-control" %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :categories_id_id, style: "display: block" %>
-    <%= form.text_field :categories_id_id %>
+  <div class="col-md-6 col-12">
+
+    <div class="form-group">
+      <%= form.label :start_date, class: "form-label" %>
+      <%= form.date_field :start_date, class: "form-control" %>
+    </div>
+
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="col-md-6 col-12">
+
+    <div class="form-group">
+      <%= form.label :end_date, class: "form-label" %>
+      <%= form.date_field :end_date, class: "form-control" %>
+    </div>
+
   </div>
 
-  <div>
-    <%= form.label :start_date, style: "display: block" %>
-    <%= form.date_field :start_date %>
+  <div class="col-md-6 col-12">
+    <div class="form-group">
+      <%= form.label :status, class: "form-label" %>
+      <%= form.select :status_id, options_for_select([['- Select from the list', nil]] + Status.all.map { |status| [status.name, status.id] }, (@budget.status_id.presence || nil)), {}, class: "form-control" %>
+    </div>
+  </div>
+</div>
+
+  <div class="col-12">
+    <div class="form-group">
+      <%= form.label :description, class: "form-label"  %>
+      <%= form.text_area :description, class: "form-control", row: 8 %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :end_date, style: "display: block" %>
-    <%= form.date_field :end_date %>
-  </div>
+  <hr class="mt-5 mb-5">
+  <%= form.submit class: "w-100 btn btn-primary" %>
+  <%= link_to "Back to budget", budgets_path, class: "w-100 text-muted btn btn-link" %>
 
-  <div>
-    <%= form.label :statuses_id_id, style: "display: block" %>
-    <%= form.text_field :statuses_id_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

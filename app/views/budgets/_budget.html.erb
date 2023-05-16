@@ -1,37 +1,123 @@
-<div id="<%= dom_id budget %>">
-  <p>
-    <strong>Title:</strong>
-    <%= budget.title %>
-  </p>
+<div class="card"  id="<%= dom_id budget %>">
+    <div class="p-5 card-body">
+      <div class="row">
+          <div class="text-end col"><span class="badge bg-danger"><%= @budget.status.name%></span></div>
+      </div>
+      <div class="row">
+          <div class="text-center col">
+            <h2 class="mb-2">Budget from <%= @budget.title %></h2>
+            <p class="text-muted mb-6">Budget #<%= @budget.id%></p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6 col-12">
+           <h6 class="text-uppercase text-muted">
+              Title
+            </h6>
+            <p class="mb-4">
+              <%= budget.title %>
+            </p>
+            <h6 class="text-uppercase text-muted">
+              Category:
+            </h6>
+            <p class="mb-4">
+              <%= budget.category.name %>
+            </p>
+          </div>
+          
+          <div class="text-md-end col-md-6 col-12">
+            <h6 class="text-uppercase text-muted">
+              Start Date:
+            </h6>
+            <p class="mb-4">
+              <%= budget.formatted_start_date %>
+            </p>
+            <h6 class="text-uppercase text-muted">
+              End Date:
+            </h6>
+            <p class="mb-4">
+              <%= budget.formatted_end_date %>
+            </p>
+          </div>
+          
+          <div class="text-md-start col-md-6 col-12">
+            <h6 class="text-uppercase text-muted">
+              Duration:
+            </h6>
+            <p class="mb-4">
+              <%= budget.duration %>
+            </p>
+          </div>
+          <div class="text-md-end col-md-6 col-12">
+            <h6 class="text-uppercase text-muted">
+              Status:
+            </h6>
+            <p class="mb-4">
+              <%= budget.status.name %>
+            </p>
+          </div>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= budget.amount %>
-  </p>
+          <div class="text-md-start col-12">
+            <h6 class="text-uppercase text-muted">
+              Description:
+            </h6>
+            <p class="mb-4">
+              <%= budget.description || "N/A" %>
+            </p>
+          </div>
+          
+          <div class="text-md-end col-12">
+            <%= link_to new_budget_expense_url(budget), class: "btn-rounded-circle btn btn-primary"  do %>
+              <i class="feather fe fe-plus"></i>
+            <% end %>
+          </div>
+      </div>
 
-  <p>
-    <strong>Categories:</strong>
-    <%= budget.categories_id_id %>
-  </p>
+      <div class="row">
+          <div class="col-12">
+            <div class="table-responsive">
+                <table class="my-4 table">
+                  <thead>
+                      <tr>
+                        <th class="px-0 bg-transparent border-top-0"><span class="h6">Amount</span></th>
+                        <th class="px-0 bg-transparent border-top-0" colspan="2"><span class="h6">Expense Date</span></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <% @budget.expense.each do |expense| %>
+                      
+                      <tr>
+                        <td class="px-0">
+                          <%= expense.formatted_amount %>
+                        </td>
+                        <td class="px-0">
+                          <%= expense.formatted_repayment_date %>
+                        </td>
+                        <td class="text-end d-flex d-flex-end">
+                          <%= button_to "Delete", @expense, method: :delete, class: "btn btn-sm btn-danger pr-4"  %>
+                          <%= link_to "Edit", debt_expense_path(@budget, expense), class: "btn btn-sm bt-primary" %>
+                        </td>
+                      </tr>
+                    
+                    <% end %>
 
-  <p>
-    <strong>Description:</strong>
-    <%= budget.description %>
-  </p>
+                    <tr>
+                      <td class="px-0 border-top border-top-2">
+                        <strong>Total expense</strong>
+                      </td>
+                      <td colspan="2" class="px-0 text-end border-top border-top-2">
+                        <span class="h3">
+                          
+                          <%= number_to_currency(@budget.expense.sum(:amount), precision: 2, unit: "MK", separator: ".", delimiter: ",") %>
 
-  <p>
-    <strong>Start date:</strong>
-    <%= budget.start_date %>
-  </p>
+                        </span>
+                      </td>
+                    </tr>
 
-  <p>
-    <strong>End date:</strong>
-    <%= budget.end_date %>
-  </p>
-
-  <p>
-    <strong>Statuses:</strong>
-    <%= budget.statuses_id_id %>
-  </p>
-
+                  </tbody>
+                </table>
+            </div>
+          </div>
+      </div>
+    </div>
 </div>

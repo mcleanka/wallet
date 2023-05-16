@@ -2,20 +2,22 @@ class Budget < ApplicationRecord
 	include ActionView::Helpers::DateHelper
 	include ActionView::Helpers::NumberHelper
 
-  belongs_to :category
-  belongs_to :status
+	belongs_to :category
+	belongs_to :status
 
-  validates_presence_of :title, :amount, :category_id, :description, :start_date, :end_date, :status_id
+	has_many :expense, :dependent => :destroy
 
-  def formatted_start_date
-    	start_date.strftime("%d %b, %Y")
+	validates_presence_of :title, :amount, :category_id, :start_date, :end_date, :status_id
+
+	def formatted_start_date
+		start_date.strftime("%d %b, %Y")
 	end
 
-  def formatted_end_date
-    	end_date.strftime("%d %b, %Y")
+	def formatted_end_date
+		end_date.strftime("%d %b, %Y")
 	end
 
-  def duration
+	def duration
 		distance_of_time_in_words(start_date, end_date, include_seconds: true)
 	end
 
