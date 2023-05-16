@@ -5,7 +5,7 @@ class Budget < ApplicationRecord
   belongs_to :category
   belongs_to :status
 
-  validates_presence_of :title, :amount, :category_d, :description, :start_date, :end_date, :status_id
+  validates_presence_of :title, :amount, :category_id, :description, :start_date, :end_date, :status_id
 
   def formatted_start_date
     	start_date.strftime("%d %b, %Y")
