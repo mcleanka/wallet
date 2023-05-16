@@ -1,0 +1,77 @@
+<%= form_with(model: debt_payment, url: debt_debt_payments_path(debt)) do |form| %>
+
+    <% if debt_payment.errors.any? %>
+    <div class="fade alert alert-light text-danger show">
+      <div class="alert-heading h4">
+        <%= pluralize(debt_payment.errors.count, "error") %> prohibited this debt payment from being saved:
+      </div>
+
+      <ul>
+        <% debt_payment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+  <div>
+
+    <%= form.hidden_field :debt_id, value: @debt.id %>
+  
+  </div>
+
+  <div class="col-6">
+
+    <div class="form-group">
+      <%= form.label :amount, class: "form-label" %>
+      <%= form.number_field :amount, class: "form-control" %>
+    </div>
+
+  </div>
+
+    <div class="col-6">
+
+      <div class="form-group">
+        <%= form.label :repayment_date, class: "form-label" %>
+        <%= form.date_field :repayment_date, class: "form-control" %>
+      </div>
+
+    </div>
+
+  <div class="col-6">
+    <div class="form-group">
+      <%= form.label :notes, class: "form-label"  %>
+      <%= form.text_area :notes, class: "form-control", row: 8 %>
+    </div>
+  </div>
+
+    <div class="col-6">
+
+    <div class="form-check">
+      <%= form.check_box :repaid, class: "form-check-input", id: "repaid" %>
+      <%= form.label :is_the_debt_completely_repaid, class: "form-check-label", for: "repaid" %>
+    </div>
+
+  </div>
+
+</div>
+
+  <hr class="my-5">
+
+  <div class="row align-items-center nav">
+      <div class="col-auto">
+        
+        <%= link_to "Back to debt", @debt, class: "btn btn-white btn-lg" %>
+      
+      </div>
+      
+      <div class="text-center col">
+        <h6 class="text-uppercase text-danger mb-0">Total debt Amount: <%= @debt.formatted_amount %></h6>
+      </div>
+      <div class="col-auto">
+
+        <%= form.submit class: "btn btn-primary btn-lg" %>
+      
+      </div>
+  </div>
+<% end %>

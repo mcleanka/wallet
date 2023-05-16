@@ -1,0 +1,50 @@
+<div class="header">
+    <div class="header-body">
+      <div class="align-items-center row">
+          <div class="col">
+            <h6 class="header-pretitle">Overview</h6>
+            <h1 class="header-title text-truncate"><%= 'Debts' %></h1>
+          </div>
+          <div class="col-auto">
+
+            <%= link_to "New Debt", new_debt_path, type: "button", class: "btn btn-primary" %>
+
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="table-responsive">
+      <table class="card-table table-nowrap table table-sm">
+          <thead>
+            <tr>
+                <th>Debt Name</th>
+                <th>Amount</th>
+                <th>Due Date</th>
+                <th>Interest Rate</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <% @debts.each do |debt| %>
+            <tr>
+                <td><%= debt.debtor_name %></td>
+                <td><%= debt.formatted_amount %></td>
+                <td><%= debt.formatted_due_date %></td>
+                <td><%= debt.formatted_interest_rate %></td>
+                <td><span class="badge bg-success-soft"><%= debt.status.name %></span></td>
+                <td>
+                
+                  <%= link_to "Show", debt %>
+
+                </td>
+            </tr>
+          <% end %>
+
+          </tbody>
+      </table>
+    </div>
+</div>

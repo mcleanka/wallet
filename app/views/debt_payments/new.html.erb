@@ -3,12 +3,12 @@
       <div class="justify-content-center row">
          <div class="text-center col-xl-6 col-lg-8 col-md-10 col-12">
             <h6 class="mb-4 text-uppercase text-muted">Payback</h6>
-            <h1 class="mb-3">Editing Loan Payment</h1>
-            <p class="mb-5 text-muted">Making loan payment back to <%= @loan.lender %> </p>
+            <h1 class="mb-3">Debt Payment</h1>
+            <p class="mb-5 text-muted">Receiving debt payment from <%= @debt.debtor_name %> </p>
          </div>
       </div>
       
-      <%= render "form", loan_payment: @loan_payment, loan: @loan %>
+      <%= render "form", debt_payment: @debt_payment, debt: @debt %>
       
    </div>
 </div>
