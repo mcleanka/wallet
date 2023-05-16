@@ -1,7 +1,9 @@
 <%= form_with(model: debt) do |form| %>
   <% if debt.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(debt.errors.count, "error") %> prohibited this debt from being saved:</h2>
+    <div class="fade alert alert-light text-danger show">
+      <div class="alert-heading h4">
+        <%= pluralize(debt.errors.count, "error") %> prohibited this debt from being saved:
+      </div>
 
       <ul>
         <% debt.errors.each do |error| %>
@@ -11,32 +13,62 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :debtor_name, style: "display: block" %>
-    <%= form.text_field :debtor_name %>
+  <div class="row">
+
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :debtor_name, class: "form-label" %>
+        <%= form.text_field :debtor_name, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :amount, class: "form-label" %>
+        <%= form.number_field :amount, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-4 col-12">
+
+      <div class="form-group">
+        <%= form.label :due_date, class: "form-label" %>
+        <%= form.date_field :due_date, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-4 col-12">
+
+      <div class="form-group">
+        <%= form.label :interest_rate, class: "form-label" %>
+        <%= form.text_field :interest_rate, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-4 col-12">
+      <div class="form-group">
+        <%= form.label :status, class: "form-label" %>
+        <%= form.select :status_id, options_for_select([['- Select from the list', nil]] + Status.all.map { |status| [status.name, status.id] }, (@debt.status_id.presence || nil)), {}, class: "form-control" %>
+      </div>
+    </div>
+    
+    <div class="col-12">
+      <div class="form-group">
+        <%= form.label :notes, class: "form-label"  %>
+        <%= form.text_area :notes, class: "form-control", row: 8 %>
+      </div>
+    </div>
+
   </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
-  </div>
+  <hr class="mt-5 mb-5">
+  <%= form.submit class: "w-100 btn btn-primary" %>
+  <%= link_to "Back to debts", debts_path, class: "w-100 text-muted btn btn-link" %>
 
-  <div>
-    <%= form.label :due_date, style: "display: block" %>
-    <%= form.date_field :due_date %>
-  </div>
-
-  <div>
-    <%= form.label :interest_rate, style: "display: block" %>
-    <%= form.text_field :interest_rate %>
-  </div>
-
-  <div>
-    <%= form.label :notes, style: "display: block" %>
-    <%= form.text_area :notes %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

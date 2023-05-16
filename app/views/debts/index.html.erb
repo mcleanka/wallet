@@ -14,8 +14,37 @@
     </div>
 </div>
 
-<% if notice %>
-<div role="alert" class="fade alert alert-danger show">
-  <%= notice %>
+<div class="card">
+    <div class="table-responsive">
+      <table class="card-table table-nowrap table table-sm">
+          <thead>
+            <tr>
+                <th>Debt Name</th>
+                <th>Amount</th>
+                <th>Due Date</th>
+                <th>Interest Rate</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <% @debts.each do |debt| %>
+            <tr>
+                <td><%= debt.debtor_name %></td>
+                <td><%= debt.formatted_amount %></td>
+                <td><%= debt.formatted_due_date %></td>
+                <td><%= debt.formatted_interest_rate %></td>
+                <td><span class="badge bg-success-soft"><%= debt.status.name %></span></td>
+                <td>
+                
+                  <%= link_to "Show", debt %>
+
+                </td>
+            </tr>
+          <% end %>
+
+          </tbody>
+      </table>
+    </div>
 </div>
-<% end %>
