@@ -11,8 +11,12 @@ Rails.application.routes.draw do
     resources :goal_progresses
   end
 
-  resources :expenses
-  resources :budgets
+  resources :expenses, only: [:index, :create, :new, :edit]
+
+  resources :budgets do
+    resources :expenses
+  end
+
   resources :incomes
   
   namespace :settings do

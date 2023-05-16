@@ -1,10 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<div class="justify-content-center row">
+   <div class="col-xl-8 col-lg-10 col-12">
+      <div class="header mt-md-5">
+         <div class="header-body">
+            <div class="align-items-center row">
+               <div class="col">
+                  <h6 class="header-pretitle">Budget Details</h6>
+                  <h1 class="header-title">Budget #<%= @budget.id %></h1>
+               </div>
+               <div class="col-auto d-flex">
+                <%= link_to "Back to Budgets", budgets_path, type: "button", class: "lift btn btn-white" %>
+                <%= link_to "Edit", edit_budget_url(@budget), type: "button", class: "lift mx-2 btn btn-primary" %>
+                <%= button_to "Delete", @budget, method: :delete, class: "lift btn btn-danger" %>
+              </div>
+            </div>
+         </div>
+      </div>
 
-<%= render @budget %>
+      <%= render @budget %>
 
-<div>
-  <%= link_to "Edit this budget", edit_budget_path(@budget) %> |
-  <%= link_to "Back to budgets", budgets_path %>
-
-  <%= button_to "Destroy this budget", @budget, method: :delete %>
+   </div>
 </div>

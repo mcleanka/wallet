@@ -1,10 +1,15 @@
-<h1>Editing budget</h1>
-
-<%= render "form", budget: @budget %>
-
-<br>
-
-<div>
-  <%= link_to "Show this budget", @budget %> |
-  <%= link_to "Back to budgets", budgets_path %>
+<div class="justify-content-center row">
+   <div class="col-xl-8 col-lg-10 col-12">
+      <div class="header mt-md-5">
+         <div class="header-body">
+            <div class="align-items-center row">
+               <div class="col">
+                  <h6 class="header-pretitle">Editing Budget</h6>
+                  <h1 class="header-title">Create Editing Budget</h1>
+               </div>
+            </div>
+         </div>
+      </div>
+      <%= render "form", budget: @budget %>
+   </div>
 </div>
