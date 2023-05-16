@@ -24,6 +24,14 @@
 
     <div class="main-content">
 
+      <% flash.each do |name, msg| %>
+
+        <div class="alert alert-success rounded-0 alert-dismissible" role="alert">
+          <%= msg %>
+        </div>
+      
+      <% end %>
+
       <% unless current_page?(dashboard_path) %>
 
         <div class="container-fluid">
