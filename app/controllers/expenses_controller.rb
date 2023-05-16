@@ -1,6 +1,8 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[ show edit update destroy ]
 
+  before_action :set_budget, only: %i[ show edit ]
+
   # GET /expenses or /expenses.json
   def index
     @expenses = Expense.all
@@ -61,6 +63,10 @@ class ExpensesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_expense
       @expense = Expense.find(params[:id])
+    end
+    
+    def set_budget
+      @budget = Budget.find(params[:budget_id])
     end
 
     # Only allow a list of trusted parameters through.

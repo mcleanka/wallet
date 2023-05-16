@@ -1,32 +1,60 @@
-<div id="<%= dom_id expense %>">
-  <p>
-    <strong>Title:</strong>
-    <%= expense.title %>
-  </p>
+<div class="card"  id="<%= dom_id debt %>">
+    <div class="p-5 card-body">
+      <div class="row">
+          <div class="text-end col"><span class="badge bg-danger"><%= expense.status.name%></span></div>
+      </div>
+      <div class="row">
+          <div class="text-center col">
+            <h2 class="mb-2">Expense from <%= expense.budget.name %></h2>
+            <p class="text-muted mb-6">Expense #<%= expense.id%></p>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6 col-12">
+           <h6 class="text-uppercase text-muted">
+              Title:
+            </h6>
+            <p class="mb-4">
+              <%= expense.title %>
+            </p>
+            <h6 class="text-uppercase text-muted">
+              Expense Date:
+            </h6>
+            <p class="mb-4">
+              <%= expense.formatted_date %>
+            </p>
+          </div>
 
-  <p>
-    <strong>Statuses:</strong>
-    <%= expense.statuses_id %>
-  </p>
+          <div class="text-md-end col-md-6 col-12">
+            <h6 class="text-uppercase text-muted">
+              Amount:
+            </h6>
+            <p class="mb-4">
+              <%= expense.formatted_amount %>
+            </p>
+            <h6 class="text-uppercase text-muted">
+              Budget
+            </h6>
+            <p class="mb-4">
+              <%= expense.budget.title %>
+            </p>
+          </div>
 
-  <p>
-    <strong>Amount:</strong>
-    <%= expense.amount %>
-  </p>
+          <div class="text-md-start col-12">
+            <h6 class="text-uppercase text-muted">
+              Description:
+            </h6>
+            <p class="mb-4">
+              <%= expense.description || "N/A" %>
+            </p>
+          </div>
 
-  <p>
-    <strong>Budgets:</strong>
-    <%= expense.budgets_id %>
-  </p>
+          <div class="text-md-end col-12">
+            <%= link_to new_budget_expense_url(expense.budget), class: "btn-rounded-circle btn btn-primary"  do %>
+              <i class="feather fe fe-plus"></i>
+            <% end %>
+          </div>
 
-  <p>
-    <strong>Description:</strong>
-    <%= expense.description %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= expense.date %>
-  </p>
-
+        </div>
+      </div>
 </div>
