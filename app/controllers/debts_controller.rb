@@ -65,6 +65,6 @@ class DebtsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def debt_params
-      params.require(:debt).permit(:debtor_name, :amount, :due_date, :interest_rate, :notes)
+      params.require(:debt).permit(:debtor_name, :amount, :due_date, :interest_rate, :notes, :status_id)
     end
 end
