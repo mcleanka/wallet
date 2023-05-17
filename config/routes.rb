@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :goal_progresses
   end
 
-  resources :expenses, only: [:index, :create, :new, :edit]
+  resources :expenses #, only: [:index, :create, :new, :edit, :update, :destroy, :show]
 
   resources :budgets do
     resources :expenses
