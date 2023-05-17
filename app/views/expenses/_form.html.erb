@@ -1,7 +1,9 @@
 <%= form_with(model: expense) do |form| %>
   <% if expense.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+    <div class="fade alert alert-light text-danger show">
+      <div class="alert-heading h4">
+        <%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:
+      </div>
 
       <ul>
         <% expense.errors.each do |error| %>
@@ -11,37 +13,61 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="row">
+
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :title, class: "form-label" %>
+        <%= form.text_field :title, class: "form-control" %>
+      </div>
+
+    </div>
+    
+    <div class="col-md-6 col-12">
+
+      <div class="form-group">
+        <%= form.label :amount, class: "form-label" %>
+        <%= form.number_field :amount, class: "form-control" %>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-4 col-12">
+
+      <div class="form-group">
+        <%= form.label :date, class: "form-label" %>
+        <%= form.date_field :date, class: "form-control" %>
+      </div>
+
+    </div>
+
+    <div class="col-md-4 col-12">
+      <div class="form-group">
+        <%= form.label :budget, class: "form-label" %>
+        <%= form.select :budget_id, options_for_select([['- Select from the list', nil]] + Budget.all.map { |budget| [budget.title, budget.id] }, (@expense.budget_id.presence || nil)), {}, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-12">
+      <div class="form-group">
+        <%= form.label :status, class: "form-label" %>
+        <%= form.select :status_id, options_for_select([['- Select from the list', nil]] + Status.all.map { |status| [status.name, status.id] }, (@expense.status_id.presence || nil)), {}, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-group">
+        <%= form.label :description, class: "form-label"  %>
+        <%= form.text_area :description, class: "form-control", row: 8 %>
+      </div>
+    </div>
+
   </div>
 
-  <div>
-    <%= form.label :statuses_id, style: "display: block" %>
-    <%= form.text_field :statuses_id %>
-  </div>
+  <hr class="mt-5 mb-5">
+  <%= form.submit class: "w-100 btn btn-primary" %>
+  <%= link_to "Back to expenses", expenses_path, class: "w-100 text-muted btn btn-link" %>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount %>
-  </div>
-
-  <div>
-    <%= form.label :budgets_id, style: "display: block" %>
-    <%= form.text_field :budgets_id %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

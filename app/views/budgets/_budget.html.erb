@@ -91,11 +91,11 @@
                           <%= expense.formatted_amount %>
                         </td>
                         <td class="px-0">
-                          <%= expense.formatted_repayment_date %>
+                          <%= expense.formatted_date %>
                         </td>
                         <td class="text-end d-flex d-flex-end">
                           <%= button_to "Delete", @expense, method: :delete, class: "btn btn-sm btn-danger pr-4"  %>
-                          <%= link_to "Edit", debt_expense_path(@budget, expense), class: "btn btn-sm bt-primary" %>
+                          <%= link_to "Edit", budget_expense_path(@budget, expense), class: "btn btn-sm bt-primary" %>
                         </td>
                       </tr>
                     

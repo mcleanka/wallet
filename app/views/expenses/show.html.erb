@@ -1,10 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<div class="justify-content-center row">
+   <div class="col-xl-8 col-lg-10 col-12">
+      <div class="header mt-md-5">
+         <div class="header-body">
+            <div class="align-items-center row">
+               <div class="col">
+                  <h6 class="header-pretitle">Expense Details</h6>
+                  <h1 class="header-title">Expense #<%= @expense.id %></h1>
+               </div>
+               <div class="col-auto d-flex">
+                <%= link_to "Back to expenses", expenses_path, type: "button", class: "lift btn btn-white" %>
+                <%= link_to "Edit", edit_expense_path(@expense), type: "button", class: "lift mx-2 btn btn-primary" %>
+                <%= button_to "Delete", @expense, method: :delete, class: "lift btn btn-danger" %>
+              </div>
+            </div>
+         </div>
+      </div>
 
-<%= render @expense %>
+      <%= render @expense %>
 
-<div>
-  <%= link_to "Edit this expense", edit_expense_path(@expense) %> |
-  <%= link_to "Back to expenses", expenses_path %>
-
-  <%= button_to "Destroy this expense", @expense, method: :delete %>
+   </div>
 </div>
