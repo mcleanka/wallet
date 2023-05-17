@@ -1,11 +1,13 @@
 class Expense < ApplicationRecord
-  belongs_to :status
-  has_one :budget
+	include ActionView::Helpers::NumberHelper
 
-  validates_presence_of :title, :status_id, :amount, :budget_id, :date
+	belongs_to :status
+	belongs_to :budget
 
-  def formatted_date
-    	date.strftime("%d %b, %Y")
+	validates_presence_of :title, :status_id, :amount, :budget_id, :date
+
+	def formatted_date
+		date.strftime("%d %b, %Y")
 	end
 
 	def formatted_amount
