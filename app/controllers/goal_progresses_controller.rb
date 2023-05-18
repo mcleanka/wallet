@@ -26,10 +26,8 @@ class GoalProgressesController < ApplicationController
     respond_to do |format|
       if @goal_progress.save
         format.html { redirect_to goal_progress_url(@goal_progress), notice: "Goal progress was successfully created." }
-        format.json { render :show, status: :created, location: @goal_progress }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @goal_progress.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -39,10 +37,8 @@ class GoalProgressesController < ApplicationController
     respond_to do |format|
       if @goal_progress.update(goal_progress_params)
         format.html { redirect_to goal_progress_url(@goal_progress), notice: "Goal progress was successfully updated." }
-        format.json { render :show, status: :ok, location: @goal_progress }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @goal_progress.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -53,7 +49,6 @@ class GoalProgressesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to goal_progresses_url, notice: "Goal progress was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 
