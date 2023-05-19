@@ -13,3 +13,48 @@
       </div>
     </div>
 </div>
+
+<div class="card">
+    <div class="table-responsive">
+      <table class="card-table table-nowrap table table-sm">
+          <thead>
+            <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Duration</th>
+                <th>Status</th>
+                <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <% @goals.each do |goal| %>
+            <tr>
+              <td><%= goal.title %></td>
+              <td><%= goal.formatted_amount %></td>
+              <td><%= goal.category.name %></td>
+              <td><%= goal.formatted_start_date %></td>
+              <td><%= goal.formatted_end_date %></td>
+              <td><%= goal.duration %></td>
+
+              <td>
+                <span class="badge bg-success-soft">
+                  <%= goal.status.name %>
+                </span>
+              </td>
+              
+              <td>
+              
+                <%= link_to "Show", goal %>
+
+              </td>
+            </tr>
+          <% end %>
+
+          </tbody>
+      </table>
+    </div>
+</div>
