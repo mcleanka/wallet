@@ -1,7 +1,10 @@
-<%= form_with(model: goal_progress) do |form| %>
-  <% if goal_progress.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(goal_progress.errors.count, "error") %> prohibited this goal_progress from being saved:</h2>
+<%= form_with(model: goal_progress, url: goal_goal_progresses_path(goal)) do |form| %>
+
+    <% if goal_progress.errors.any? %>
+    <div class="fade alert alert-light text-danger show">
+      <div class="alert-heading h4">
+        <%= pluralize(goal_progress.errors.count, "error") %> prohibited this goal progess from being saved:
+      </div>
 
       <ul>
         <% goal_progress.errors.each do |error| %>
@@ -10,33 +13,51 @@
       </ul>
     </div>
   <% end %>
+<div class="row">
 
   <div>
-    <%= form.label :goals_id, style: "display: block" %>
-    <%= form.text_field :goals_id %>
+
+    <%= form.hidden_field :goal_id, value: @goal.id %>
+  
   </div>
 
-  <div>
-    <%= form.label :amount_saved, style: "display: block" %>
-    <%= form.text_field :amount_saved %>
+  <div class="col-6">
+
+    <div class="form-group">
+      <%= form.label :amount_saved, class: "form-label" %>
+      <%= form.number_field :amount_saved, class: "form-control" %>
+    </div>
+
   </div>
 
-  <div>
-    <%= form.label :completion_percentage, style: "display: block" %>
-    <%= form.text_field :completion_percentage %>
-  </div>
+    <div class="col-md-6 col-12">
 
-  <div>
-    <%= form.label :statuses_id, style: "display: block" %>
-    <%= form.text_field :statuses_id %>
-  </div>
+      <div class="form-group">
+        <%= form.label :completion_percentage, class: "form-label" %>
+        <%= form.text_field :completion_percentage, class: "form-control" %>
+      </div>
 
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date %>
-  </div>
+    </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+    <div class="col-md-4 col-12">
+      <div class="form-group">
+        <%= form.label :status, class: "form-label" %>
+        <%= form.select :status_id, options_for_select([['- Select from the list', nil]] + Status.all.map { |status| [status.name, status.id] }, (@goal_progress.status_id.presence || nil)), {}, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col-6">
+
+      <div class="form-group">
+        <%= form.label :date, class: "form-label" %>
+        <%= form.date_field :date, class: "form-control" %>
+      </div>
+
+    </div>
+</div>
+
+  <hr class="mt-5 mb-5">
+  <%= form.submit class: "w-100 btn btn-primary" %>
+  <%= link_to "Back to goals", goals_path, class: "w-100 text-muted btn btn-link" %>
+
 <% end %>
