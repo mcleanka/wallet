@@ -9,6 +9,12 @@ class Budget < ApplicationRecord
 
 	validates_presence_of :title, :amount, :category_id, :start_date, :end_date, :status_id
 
+	scope :duration_less_than_or_equal_to_month, -> {
+		next_month_start = Date.current.next_month.beginning_of_month
+		next_month_end = next_month_start.end_of_month
+		where("DATEDIFF(end_date, start_date) <= ?", next_month_end.day + 1)
+	}
+
 	def formatted_start_date
 		start_date.strftime("%d %b, %Y")
 	end
@@ -23,5 +29,9 @@ class Budget < ApplicationRecord
 
 	def formatted_amount
 		number_to_currency(amount, unit: "MK", separator: ".", delimiter: ",")
-	end 
+	end
+
+	def self.total_amount_within_month_duration
+		duration_less_than_or_equal_to_month.sum(:amount)
+	end
 end
