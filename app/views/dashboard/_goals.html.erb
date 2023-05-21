@@ -1,0 +1,50 @@
+<div class="row">
+      <div class="col-12">
+         <div class="card">
+            <div class="card-header">
+               <h4 class="card-header-title">Goals</h4>
+               <button type="button" class="btn btn-white btn-sm">Export</button>
+            </div>
+            <div class="table-responsive">
+               <table class="table-nowrap card-table table table-sm">
+                  <thead>
+                     <tr>
+                        <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Goal</th>
+                        <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Status</th>
+                        <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Progress</th>
+                        <th colspan="1" title="Toggle SortBy" style="cursor: pointer;" class="is-sortable">Due Date</th>
+                        <th colspan="1" class="text-end">Team</th>
+                        <th colspan="1" class="text-end">&nbsp;</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <% @goals.each do |goal| %>
+					 <tr>
+                        <td>Update the API</td>
+                        <td><span class="text-warning">●</span> In progress</td>
+                        <td>55%</td>
+                        <td><time datetime="2018-07-24">7/24/2018</time></td>
+                        <td class="text-end">
+                           <div class="avatar-group"><a class="avatar avatar-xs" href="/profile-posts"><img class="avatar-img rounded-circle" src="/img/avatars/profiles/avatar-1.jpg" alt="Dianna Smiley"></a><a class="avatar avatar-xs" href="/profile-posts"><img class="avatar-img rounded-circle" src="/img/avatars/profiles/avatar-2.jpg" alt="Ab Hadley"></a><a class="avatar avatar-xs" href="/profile-posts"><img class="avatar-img rounded-circle" src="/img/avatars/profiles/avatar-3.jpg" alt="Adolfo Hess"></a><a class="avatar avatar-xs" href="/profile-posts"><img class="avatar-img rounded-circle" src="/img/avatars/profiles/avatar-4.jpg" alt="Daniela Dewitt"></a></div>
+                        </td>
+                        <td class="text-end">
+                           <div class="dropdown">
+                              <span class="dropdown-ellipses dropdown-toggle" id="react-aria-20" aria-expanded="false" role="button">
+                                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical ">
+                                    <g>
+                                       <circle cx="12" cy="12" r="1"></circle>
+                                       <circle cx="12" cy="5" r="1"></circle>
+                                       <circle cx="12" cy="19" r="1"></circle>
+                                    </g>
+                                 </svg>
+                              </span>
+                           </div>
+                        </td>
+                     </tr>
+					 <% end %>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </div>
