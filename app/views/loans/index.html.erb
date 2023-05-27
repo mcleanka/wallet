@@ -45,7 +45,7 @@
                 <td><%= loan.formatted_start_date %></td>
                 <td><%= loan.formatted_end_date %></td>
                 <td><%= loan.duration %></td>
-                <td><span class="badge bg-success-soft"><%= loan.status.name %></span></td>
+                <td><span class="badge bg-<%= loan.status.color %>-soft"><%= loan.status.name %></span></td>
                 <td class="text-end">
                   <%= link_to loan_path(loan), type: "button", class: "btn-rounded-circle btn btn-white btn-sm", title: "Show details" do %>
                     <i class="fe fe-eye"></i>
