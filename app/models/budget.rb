@@ -15,6 +15,35 @@ class Budget < ApplicationRecord
 		where("DATEDIFF(end_date, start_date) <= ?", next_month_end.day + 1)
 	}
 
+	def total_expenses
+		expense.sum(:amount)
+	end
+
+	def self.total_budgets
+		sum(:amount)
+	end
+
+	def self.budgets_total_expenses
+		Expense.group(:budget_id).sum(:amount)
+	end
+
+	def self.budgets_total_variance
+		budgets_total_expenses = Expense.where(budget_id: all.pluck(:id)).sum(:amount)
+		total_budgets - budgets_total_expenses
+	end
+
+	def budget_variance
+		amount - total_expenses
+	end
+
+	def formatted_budget_variance
+		number_to_currency(budget_variance, unit: "MK", separator: ".", delimiter: ",")
+	end
+
+	def formatted_total_expenses
+		number_to_currency(total_expenses, unit: "MK", separator: ".", delimiter: ",")
+	end
+
 	def formatted_start_date
 		start_date.strftime("%d %b, %Y")
 	end

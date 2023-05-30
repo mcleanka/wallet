@@ -21,6 +21,8 @@
             <tr>
                 <th>Title</th>
                 <th>Amount</th>
+                <th>Expense</th>
+                <th>Variance</th>
                 <th>Category</th>
                 <th>Start Date</th>
                 <th>End Date</th>
@@ -35,6 +37,8 @@
             <tr>
                 <td><%= budget.title %></td>
                 <td><%= budget.formatted_amount %></td>
+                <td><%= budget.formatted_total_expenses %></td>
+                <td><%= budget.formatted_budget_variance %></td>
                 <td><%= budget.category.name %></td>
                 <td><%= budget.formatted_start_date %></td>
                 <td><%= budget.formatted_end_date %></td>
@@ -47,6 +51,14 @@
                 </td>
             </tr>
           <% end %>
+
+          <tr>
+            <td></td>
+            <td><%= formatted_budgets_total %></td>
+            <td><%= formatted_budgets_total_expenses %></td>
+            <td><%= formatted_budgets_total_variance %></td>
+
+          </tr>
 
           </tbody>
       </table>

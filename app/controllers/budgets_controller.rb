@@ -3,7 +3,7 @@ class BudgetsController < ApplicationController
 
   # GET /budgets or /budgets.json
   def index
-    @budgets = Budget.all
+    @budgets = Budget.includes(:expense).all
   end
 
   # GET /budgets/1 or /budgets/1.json
