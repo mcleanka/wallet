@@ -27,4 +27,8 @@ Rails.application.routes.draw do
 
   root "dashboard#index", as: 'dashboard'
 
+  namespace :api do
+    resources :budgets
+  end
+
 end
